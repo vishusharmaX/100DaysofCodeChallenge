@@ -105,6 +105,7 @@ int main(){
     print(tail);
 
    insertNode(tail, 3, 5);
+   insertNode(tail, 5, 7);
    print(tail);
    /*
    insertNode(tail, 5, 7);
