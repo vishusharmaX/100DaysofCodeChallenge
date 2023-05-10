@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int binarySearch (int arr [], int size , int key){
+int binarySearch (int *arr, int size , int key){
     int start = 0;
     int end = size-1;
     int mid = (start + (end-start)/2);
