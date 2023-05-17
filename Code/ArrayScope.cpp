@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void update(int arr[], int n){
+void update(int *arr, int n){
 
     cout<<"Inside the Function"<<endl;
 
