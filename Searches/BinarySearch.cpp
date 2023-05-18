@@ -35,6 +35,7 @@ int main(){
     int indexx = binarySearch(odd, 5, 8 );
 
     cout<<"Index of 12 is "<<index<<endl;
+    cout<<endl;
     cout<<"Index of 8 is "<<indexx<<endl;
 
     return 0;
