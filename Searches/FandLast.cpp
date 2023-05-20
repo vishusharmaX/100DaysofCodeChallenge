@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int firstOccu(int arr[] , int n , int key){
+int firstOccu(int *arr , int n , int key){
     int s = 0;
     int e = n-1;
     int mid = s + (e -s)/2;
