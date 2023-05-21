@@ -6,14 +6,14 @@ bool isSorted(int arr[], int size){
     if(size==0 || size==1){
         return true;
     }
-    //recursive case
+    //recursive cases
     if(arr[0]>arr[1]){
         return false;
     }
 
     else{
-      bool remainingPart = isSorted(arr+1,size-1);
-      return remainingPart;
+      bool remainingParts = isSorted(arr+1,size-1);
+      return remainingParts;
     }
     
 }
