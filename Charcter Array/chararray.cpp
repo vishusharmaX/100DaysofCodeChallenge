@@ -12,7 +12,7 @@ void reverse(char name[],int n){
 }
 
 
-int getlength (char name[]){
+int getlength(char name[]){
     int count = 0;
     for(int i =0 ; name[i] != '\0' ;i++){
         count++;
@@ -33,6 +33,6 @@ int main(){
 
     reverse(name,len);
     cout<<name;
-    
+    cout<<endl;
     return 0;
 }
