@@ -32,7 +32,7 @@ void merge(int arr1[] , int n , int arr2[] , int m, int arr3[]){
     }
       
 }
-void print(int ans[] , int n){
+void print(int *ans , int n){
     for(int i  = 0 ; i <n; i++){
         cout<<ans[i]<<" ";
     }
