@@ -10,7 +10,7 @@ void sayDigit(int n, string arr[]){
     int digit = n%10;
     n = n/10;
 
-    //recursive call
+    //recursive calls
     sayDigit(n,arr);
     
     cout<<arr[digit]<<" ";
