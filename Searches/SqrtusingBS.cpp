@@ -46,6 +46,7 @@ int main(){
        cin>>n;
        int tempSol = sqrtInteger(n);
        cout<<"Ans is "<<morePrecision(n,3,tempSol);
+        cout<<endl;
 
 }
 
