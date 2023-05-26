@@ -5,6 +5,7 @@ int main(){
      string removeDuplicates(string s) {
         string ans="";
         int i=0;
+          
        while(i<s.length()){
            if(ans.length()>0){
             if(ans[ans.length()-1]==s[i])
@@ -18,9 +19,11 @@ int main(){
         }
         return ans;
     }
-
+     cout<<endl;
     return 0;
 }
+
+
 
 
    
