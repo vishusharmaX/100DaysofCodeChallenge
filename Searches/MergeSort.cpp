@@ -27,7 +27,7 @@ void print(int ans[], int n){
     for(int i =0 ; i<n; i++){
         cout<<ans[i]<<" ";
     }
-    cout<<endl;
+    cout<<endl<<endl;
 }
 
 int main(){
