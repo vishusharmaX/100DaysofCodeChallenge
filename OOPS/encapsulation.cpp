@@ -10,6 +10,7 @@ class Student{
     public :
     int getAge(){
         return this->age;
+        cout<<endl;
     }
 
 };
