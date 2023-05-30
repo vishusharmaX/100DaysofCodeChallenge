@@ -33,5 +33,6 @@ int main(){
     string s;
     cin>>s;
     cout<<getMaxOccCharacter(s) <<endl;
+    cout<<endl;
     return 0;
 }
