@@ -69,6 +69,8 @@ int main(){
 
     cout<<"Character is "<<toLowerCase('b')<<endl;
     cout<<"Character is "<<toLowerCase('C')<<endl;
+    cout<<endl
+    
 
     return 0;
 }
