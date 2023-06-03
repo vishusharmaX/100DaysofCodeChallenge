@@ -33,7 +33,8 @@ using namespace std;
     //     for(int row = 0 ; row<3 ; row++){
     //         sum+=arr[row][col];
     //     }
-    //     cout<<sum << " ";
+    //     cout<<sum << " ":
+
     // }
     // }
 
@@ -53,6 +54,7 @@ using namespace std;
     cout<<"the maximum sum is "<<maxi<<endl;
     return rowIndex;
     }
+cout<<endl;
 
 int main(){
     
