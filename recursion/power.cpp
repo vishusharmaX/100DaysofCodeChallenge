@@ -22,6 +22,7 @@ int main(){
     int ans = powerofTwo(n);
 
     cout<<ans<<endl;
+    cout<<endl;
 
     return 0;
 }
