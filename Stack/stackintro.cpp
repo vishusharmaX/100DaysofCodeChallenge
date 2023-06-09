@@ -86,6 +86,7 @@ int main(){
     s.push(3);
     // for(int i = 0 ; i<s.size();i++){
     //     cout<<s<<" ";
+    //     cout<<endl;
     // }
     s.pop();
     // s.pop();
