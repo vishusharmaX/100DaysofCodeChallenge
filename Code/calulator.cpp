@@ -29,6 +29,6 @@ int main(){
         break;
     }
 
-    cout<
+    cout
     return 0;
 }
