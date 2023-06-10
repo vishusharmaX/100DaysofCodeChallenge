@@ -13,6 +13,8 @@ int main(){
     cout<< "front of the queue is : "<<q.front()<<endl;
     q.push(14);
     cout<< "front of the queue is : "<<q.front()<<endl;
+    q.push(22);
+    cout<< "front of the queue is : "<<q.front()<<endl;
     // cout<<endl;
 
     cout<<"size of the queue is : "<<q.size()<<endl;
