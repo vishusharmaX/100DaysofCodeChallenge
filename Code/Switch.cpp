@@ -20,11 +20,8 @@ int main(){
         // It is not mandotry to write the default case
         default : cout<<"It is  default Case"<<endl;
     } 
-
-
-
-
-
-
+    
+    
+    cout<<endl;
 
 }
