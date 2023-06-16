@@ -28,5 +28,6 @@ int main(){
     // obj.func();
     obj.A::func();
     obj.B::func();
+    cout<<endl;
     return 0;
 }
