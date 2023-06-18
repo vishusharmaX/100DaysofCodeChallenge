@@ -22,6 +22,7 @@ using namespace std;
             sum+=arr[row][col];
         }
         cout<<sum << " ";
+            cout<<endl;
     }
     }
 
