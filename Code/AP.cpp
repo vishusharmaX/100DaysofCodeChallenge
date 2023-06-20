@@ -11,4 +11,5 @@ int main(){
     int n;
     cin>>n;
     cout<<"Nth term of  Ap is : "<<Ap(n);
+    cout<<endl;
 }
