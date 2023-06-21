@@ -41,7 +41,7 @@ int main(){
         cout<<"Not found"<<endl;
     }
     else{
-        cout<<"Present"<<endl;
+        cout<<"Element is Present"<<endl;
     }
     
     return 0;
