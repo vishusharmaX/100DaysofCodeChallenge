@@ -21,6 +21,6 @@ int main(){
     int ans = factorial(n);
 
     cout<<ans<<endl;
-
+    cout<<endl;
     return 0;
 }
