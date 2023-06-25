@@ -24,7 +24,7 @@ int main()
         exit(0);
     }
     cout << "The " <<n<<"th term of the series is = "<< fibonacci(n) << endl;
-
+    cout<<endl;
 
     return 0;
 }
