@@ -38,5 +38,6 @@ int main(){
     
     sortOne(arr,8);
     PrintArray(arr,8);
+    cout<<endl;
   
 }
