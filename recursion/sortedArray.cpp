@@ -28,7 +28,6 @@ int main(){
     }
     else{
         cout<<"Array is not sorted"<<endl;
-        cout<<endl;
     }
     return 0;
 }
