@@ -205,6 +205,7 @@ int main(){
     cout<<"Printing preorder"<<endl;
     preorder(root);
     cout<<endl;
+    cout<<endl;
     cout<<"Printing postorder"<<endl;
     postorder(root);
     cout<<endl;
