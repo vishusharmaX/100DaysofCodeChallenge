@@ -208,6 +208,7 @@ int main(){
     cout<<"Printing postorder"<<endl;
     postorder(root);
     cout<<endl;
+    cout<<endl;
 
     return 0;
 }
