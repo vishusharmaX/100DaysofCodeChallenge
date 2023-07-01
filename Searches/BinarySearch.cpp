@@ -38,6 +38,7 @@ int main(){
     cout<<endl;
     cout<<"Index of 8 is "<<indexx<<endl;
     cout<<endl;
+    cout<<endl;
 
     return 0;
 }
