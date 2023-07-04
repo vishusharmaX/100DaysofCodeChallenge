@@ -65,7 +65,7 @@ int main(){
     double firstDouble[5];
     float firstFloat[6];
     bool firstBool[9];
-
+    cout<<endl;
     cout<<endl;
 
 
