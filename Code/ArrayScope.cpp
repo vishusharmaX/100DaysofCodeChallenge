@@ -26,10 +26,4 @@ int main(){
         cout<<arr[i]<<" ";
         cout<<endl;
     }
-
-    cout<<endl;
-
-
-
-    
 }
