@@ -142,8 +142,6 @@ int main() {
 
     buildFromLevelOrder(root);
     levelOrderTraversal(root);
-    cout<<endl;
-    cout<<endl;
     // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
 
     /*
