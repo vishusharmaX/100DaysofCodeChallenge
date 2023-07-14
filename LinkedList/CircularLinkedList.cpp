@@ -121,4 +121,5 @@ int main(){
 */
    deleteNode(tail ,5);
    print(tail);
+    cout<<endl;
 }
