@@ -119,7 +119,6 @@ int main(){
    insertNode(tail, 3, 4);
    print(tail);
 */
-    cout<<endl;
    deleteNode(tail ,5);
    print(tail);
     cout<<endl;
