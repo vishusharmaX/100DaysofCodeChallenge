@@ -158,6 +158,7 @@ int main() {
     cout << endl << "postorder traversal is:  ";
     postorder(root); 
     */
+    cout<<endl;
 
 
     return 0;
