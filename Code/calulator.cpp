@@ -28,7 +28,6 @@ int main(){
     default: cout<<"Enter Correct input";
         break;
     }
-
-  
+    cout<<endl;
     return 0;
 }
