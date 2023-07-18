@@ -33,6 +33,5 @@ int main(){
 
     reverse(name,len);
     cout<<name;
-    cout<<endl;
     return 0;
 }
