@@ -10,34 +10,33 @@
  */
 class Solution {
 public:
-
-    bool checkPallindrome(vector<int> &arr){
-        int n = arr.size();
+    bool checkPallindrome(vector<int> & ans){
         int s = 0 ;
-        int e = n-1;
-
-        while(s<=e){
-            if(arr[s] != arr[e]){
+        int e = ans.size()-1;
+        while(s<e){
+            if(ans[s] != ans[e]){
                 return false;
             }
             else{
-                s++; 
+                s++;
                 e--;
             }
         }
+
         return true;
+
     }
 
-
     bool isPalindrome(ListNode* head) {
-        vector<int>ans;
-        ListNode* temp = head;
-        while(temp != NULL){
+        vector<int> ans;
+        ListNode * temp = head;
+
+        while(temp!=NULL){
             ans.push_back(temp->val);
             temp = temp->next;
         }
 
         return checkPallindrome(ans);
-
     }
 };
+
