@@ -12,7 +12,7 @@
 class Solution {
 private : 
     int height(TreeNode* node){
-        //base case'
+        //base case
         if(node == NULL){
             return 0;
         }
