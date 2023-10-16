@@ -4,15 +4,13 @@ public:
         int n = matrix.size();
         int m = matrix[0].size();
         vector<vector<int>>temp(n,vector<int>(m,0));
-        for(int i =0 ; i < n ; i++){
-            for(int j = 0 ; j < m ; j++){
-                temp[j][n-1-i] = matrix[i][j];
+        for(int i =0 ; i < n-1 ; i++){
+            for(int j = i+1 ; j < n ; j++){
+                swap(matrix[i][j],matrix[j][i]);
             }
         }
         for(int i = 0 ; i<n ; i++){
-            for(int j = 0; j<m;j++){
-                matrix[i][j] = temp[i][j];
-            }
+            reverse(matrix[i].begin(),matrix[i].end());
         }
     }
 };
