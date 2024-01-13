@@ -10,17 +10,15 @@ class Solution
     //Function is to check whether two strings are anagram of each other or not.
     bool isAnagram(string a, string b){
         
-    if (a.length() != b.length()) {
-        return false; 
-    }
-
-    unordered_map<char, int> mpp1;
-    unordered_map<char, int> mpp2;
-
-    for (auto it : a) mpp1[it]++;
-    for (auto it : b) mpp2[it]++;
-
-    return mpp1 == mpp2;
+        // Your code here
+        sort(a.begin(),a.end());
+        sort(b.begin(),b.end());
+        
+        if(a ==b )
+            return true;
+            
+        
+        return false;
         
     }
 
