@@ -4,8 +4,8 @@ public:
         unordered_map<int,int>mpp;
         unordered_map<int,int>occur;
 
-        for(int i = 0 ; i < arr.size() ; i++){
-            mpp[arr[i]]++;
+        for(auto i :  arr){
+            mpp[i]++;
         }
         for(auto it : mpp){
             if(occur[it.second]) return false;
