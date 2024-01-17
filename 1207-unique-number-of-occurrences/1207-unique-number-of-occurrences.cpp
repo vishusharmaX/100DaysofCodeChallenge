@@ -7,6 +7,7 @@ public:
         for(auto i :  arr){
             mpp[i]++;
         }
+        
         for(auto it : mpp){
             if(occur[it.second]) return false;
             occur[it.second]++;
