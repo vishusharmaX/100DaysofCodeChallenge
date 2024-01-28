@@ -1,17 +1,24 @@
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        map<int,int>mpp;
-        mpp[0] =1;
+        unordered_map<int,int> mp;
 
-        int presum = 0 , cnt = 0;
-        for(int i = 0 ; i < nums.size(); i++){
-            presum += nums[i];
-            int remove =  presum - k;
-            cnt +=mpp[remove];
-            mpp[presum] +=1;
+        int res = 0;
+        int cumSum = 0;
+        mp.insert({0,1});
+
+        for(int i =0; i<nums.size(); i++){
+            cumSum += nums[i];
+
+            if(mp.find(cumSum-k) != mp.end()){
+                res += mp[cumSum-k];
+            }
+
+            mp[cumSum]++;
         }
 
-        return cnt;
+
+        return res;
+
     }
 };
