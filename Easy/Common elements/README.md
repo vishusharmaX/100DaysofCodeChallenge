@@ -1,4 +1,4 @@
-<h2><a href="https://practice.geeksforgeeks.org/problems/common-elements1132/1?page=2&sortBy=submissions">Common elements</a></h2><h3>Difficulty Level : Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.<br>
+<h2><a href="https://www.geeksforgeeks.org/problems/common-elements1132/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article">Common elements</a></h2><h3>Difficulty Level : Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given three arrays sorted in increasing order. Find the elements that are common in all three arrays.<br>
 <strong>Note:&nbsp;</strong></span><span style="font-size:18px">can you take care of the duplicates without using any additional Data Structure?</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
