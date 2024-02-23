@@ -1,7 +1,7 @@
 class RandomizedSet {
 public:
-        unordered_map<int,int>mpp;
-        vector<int> ans;
+     unordered_map<int,int>mpp;
+    vector<int> ans;
     RandomizedSet() {
     }
     bool find(int val){
