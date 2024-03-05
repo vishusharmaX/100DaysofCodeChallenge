@@ -1,6 +1,6 @@
 /**
  * Definition for singly-linked list.
- * struct ListNode {
+ * struct ListListNode {
  *     int val;
  *     ListNode *next;
  *     ListNode(int x) : val(x), next(NULL) {}
@@ -9,24 +9,27 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        if(head==NULL || head->next == NULL)    
+        
+        if(head == NULL || head->next == NULL)
             return NULL;
-        ListNode * slow = head;
-        ListNode * fast = head;
-        ListNode * entry = head;
 
-        while(fast!=NULL && fast->next!=NULL){
+        ListNode * fast = head;
+        ListNode * slow = head;
+        ListNode * curr = head;
+        while(fast !=NULL && fast->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
-
-            if(slow == fast){
-                while(slow!=entry){
-                    slow=slow->next;
-                    entry = entry->next;
-                }
-                return entry;
-            }
+            if(slow == fast)
+                    break;
         }
-        return NULL;
+        if (fast == nullptr || fast->next == nullptr)
+            return nullptr;
+        while(curr != slow){
+            slow= slow->next;
+            curr = curr->next;
+        }
+
+        return curr;
+
     }
 };
