@@ -7,10 +7,10 @@ public:
         
         for (int i = 1; i <= n; i++) {
             prefixSum += i;  
-            if (prefixSum * 2 == totalSum + i)
+            if(totalSum == 2 * prefixSum - i)
                 return i;
         }
-        
+
         return -1;
     }
 };
