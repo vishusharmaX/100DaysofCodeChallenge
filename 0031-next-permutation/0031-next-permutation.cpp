@@ -1,6 +1,7 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        next_permutation(nums.begin(), nums.end());
+        //using stl we can solved this
+        next_permutation(nums.begin(),nums.end());
     }
 };
