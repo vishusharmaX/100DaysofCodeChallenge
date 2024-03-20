@@ -8,42 +8,28 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-
 class Solution {
 public:
-    ListNode* findNode(ListNode* head, int k) {
-        int cnt = 1;
-        while (head != NULL) {
-            if (cnt == k)
-                return head;
-            head = head->next;
-            cnt++;
-        }
-        return head;
-    }
-
     ListNode* rotateRight(ListNode* head, int k) {
-
-        if (head == NULL || k == 0)
+        if (head == NULL || head->next == NULL || k == 0)
             return head;
 
-        ListNode* tail = head;
+        ListNode* curr = head;
         int len = 1;
-
-        while (tail->next != NULL) {
+        while (curr->next != NULL) {
+            curr = curr->next;
             len++;
-            tail = tail->next;
         }
 
-        if (k % len == 0)
-            return head;
-
+        curr->next = head;
         k = k % len;
+        k = len - k;
 
-        tail->next = head;
-        ListNode* nthNode = findNode(head, len - k);
-        head = nthNode->next;
-        nthNode->next = NULL;
+        while (k--)
+            curr = curr->next;
+
+        head = curr->next;
+        curr->next = NULL;
 
         return head;
     }
