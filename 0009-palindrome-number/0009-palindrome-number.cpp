@@ -2,12 +2,12 @@ class Solution {
 public:
     bool isPalindrome(int x) {
         string s = to_string(x);
-        string s1 = s;
+        string t = s;
         reverse(s.begin(),s.end());
 
-        if(s1 == s)
+        if(s == t)
             return true;
-        
+
         return false;
     }
 };
