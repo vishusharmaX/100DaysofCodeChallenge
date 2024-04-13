@@ -14,24 +14,23 @@ class Solution{
     vector<int> help_classmate(vector<int> arr, int n) 
     { 
         // Your code goes here
-        vector<int>ans(n,-1);
         stack<int>st;
-        
-        for(int i = n-1; i>=0; i--){
-            while(!st.empty() && st.top()>=arr[i]){
+        st.push(-1);
+        vector<int> ans(n,0);
+        for(int i = n-1 ; i >=0 ; i--){
+            int curr = arr[i];
+            while(st.top() >= curr){
                 st.pop();
             }
             
-            if(!st.empty()){
-                ans[i] = st.top();
-            }
-            
-            st.push(arr[i]);
+            ans[i] = st.top();
+            st.push(curr);
         }
         
         return ans;
     } 
 };
+
 
 //{ Driver Code Starts.
 
