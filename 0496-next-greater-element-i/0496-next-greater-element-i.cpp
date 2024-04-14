@@ -1,33 +1,25 @@
 class Solution {
 public:
-    int findpos(vector<int> nums, int key){
-        for(int i = 0 ; i <  nums.size(); i++ ){
-            if(nums[i] == key){
-                return i;
-            }
-        }
-        return -1;
-    }
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
-    
-        vector<int>ans;    
+        unordered_map<int,int>mpp;
+        int n = nums2.size();
+        stack<int>st;
 
-        for(int i = 0 ; i < nums1.size(); i++ ){
-            int element  =  nums1[i];
-            int position = findpos(nums2,element);
-            int val = -1;
-            for(int j = position ; j < nums2.size(); j++){
-                if(nums2[j] > element){
-                    val = nums2[j];
-                    break;
-                }
-                else   
-                    continue;
-            }
-            ans.push_back(val);
-        } 
+        for(int i = n-1; i>=0 ; i--){
+            int ele  = nums2[i];
+            while(!st.empty() && st.top()<=ele)
+                st.pop();
+            
+            int res = (st.empty()) ? -1 : st.top();
+
+            mpp.insert({ele,res});
+            st.push(ele);
+        }
+        vector<int>ans;
+        for(auto it : nums1){
+            ans.push_back(mpp[it]);
+        }
 
         return ans;
-
-    }
+    }   
 };
