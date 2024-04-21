@@ -13,26 +13,27 @@ public:
     int solve(int n, int k, vector<int> &stalls) {
     
         // Write your code here
-        int start = 1 , end, mid,ans;
+        int start = 1 ;
         sort(stalls.begin(),stalls.end());
-        end = stalls[n-1] - stalls[0];
-        
-        while(start <= end){
-            int mid = start +  (end- start)/2;
-            int cnt = 1 , pos = stalls[0];
-            for(int i = 1;i<n; i++){
-                if(pos + mid <= stalls[i])
-                {
+        int end = stalls[n-1]-stalls[0];
+        int ans = 0;
+        while(start<= end){
+            int mid = start + (end - start)/2;
+            int cnt = 1, pos = stalls[0];
+            for(int i = 0 ; i < n;i++){
+                if(pos + mid <= stalls[i]){
                     cnt++;
                     pos = stalls[i];
                 }
             }
+            
+            
             if(cnt < k){
-                end = mid - 1;
+                end = mid -1;
             }
             else{
-                ans = mid ;
-                start = mid + 1;
+                ans = mid;
+                start = mid +1;
             }
         }
         
