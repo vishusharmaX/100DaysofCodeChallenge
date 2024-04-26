@@ -7,28 +7,33 @@ using namespace std;
 // } Driver Code Ends
 // User function Template for C++
 
-
 class Solution {
-public:
-    bool isDigitSumPalindrome(int n) {
-        string num = to_string(n);
-        int sum = 0;
-        
-       
-        for (char digit : num) {
-            if (isdigit(digit)) {
-                sum += digit - '0';
+  public:
+    int isDigitSumPalindrome(int n) {
+        // code here
+        string s = to_string(n);
+        string t;
+        int ans = 0;
+        for(int i = 0 ; i < s.length(); i++){
+            int val = s[i] - '0';
+            ans+=val;
+        }
+        t = to_string(ans);
+        int st = 0 , e = t.length()-1;
+        while(st<=e){
+            if(t[st] != t[e])
+                return 0;
+            else{
+                st++;
+                e--;
             }
         }
         
-       
-        string sumString = to_string(sum);
-        string reversedSum = sumString;
-        reverse(reversedSum.begin(), reversedSum.end());
-        
-        return sumString == reversedSum;
+        return 1;
     }
 };
+
+
 
 //{ Driver Code Starts.
 int main() {
