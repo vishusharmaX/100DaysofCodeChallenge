@@ -4,36 +4,34 @@ using namespace std;
 
 
 // } Driver Code Ends
-
 class Solution{
-public:
+    public:
     int kthElement(int arr1[], int arr2[], int n, int m, int k)
     {
-        int i=0,j=0,c=0;
-        while(i<n&&j<m)
-        {
-            if(k==0)
-              return c;
-            if(arr1[i]<arr2[j])
-             {
-             c=arr1[i];
-             i++;
-             }
-             else 
-             {
-              c=arr2[j];
-              j++;
-             }
-             k--;
+       int i = 0, j = 0;
+    while (i < n && j < m) {
+        if (arr1[i] <= arr2[j]) {
+            if (--k == 0) return arr1[i];
+            i++;
+        } else {
+            if (--k == 0) return arr2[j];
+            j++;
         }
-        if(i<n)
-        return arr1[i+k-1];
-        return arr2[j+k-1];
-      
+    }
+
+    while (i < n) {
+        if (--k == 0) return arr1[i];
+        i++;
+    }
+
+    while (j < m) {
+        if (--k == 0) return arr2[j];
+        j++;
+    }
+
+    return -1; 
     }
 };
-
-
 
 //{ Driver Code Starts.
  
