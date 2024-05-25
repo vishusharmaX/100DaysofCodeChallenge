@@ -16,21 +16,17 @@ class Solution{
         // Your code goes here
         stack<int>st;
         st.push(-1);
-        vector<int> ans(n,0);
-        for(int i = n-1 ; i >=0 ; i--){
-            int curr = arr[i];
-            while(st.top() >= curr){
+        vector<int>ans(n,0);
+        for(int i = n-1; i>=0 ; i--){
+            while(st.top() >= arr[i])
                 st.pop();
-            }
             
             ans[i] = st.top();
-            st.push(curr);
+            st.push(arr[i]);
         }
-        
         return ans;
     } 
 };
-
 
 //{ Driver Code Starts.
 
