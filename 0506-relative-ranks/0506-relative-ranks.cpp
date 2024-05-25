@@ -1,25 +1,32 @@
 class Solution {
- public:
-  vector<string> findRelativeRanks(vector<int>& nums) {
-    const int n = nums.size();
-    vector<string> ans(n);
-    vector<int> indices(n);
+public:
+    vector<string> findRelativeRanks(vector<int>& nums) {
+        map<int,int>mpp;
+        int n = nums.size();
+        vector<string>result(n);
+        for(int i = 0 ; i < nums.size(); i++){
+            mpp[nums[i]] = i;
+        }   
 
-    iota(indices.begin(), indices.end(), 0);
-
-    ranges::sort(indices,
-                 [&](const int a, const int b) { return nums[a] > nums[b]; });
-
-    for (int i = 0; i < n; ++i)
-      if (i == 0)
-        ans[indices[0]] = "Gold Medal";
-      else if (i == 1)
-        ans[indices[1]] = "Silver Medal";
-      else if (i == 2)
-        ans[indices[2]] = "Bronze Medal";
-      else
-        ans[indices[i]] = to_string(i + 1);
-
-    return ans;
-  }
+        sort(nums.begin(),nums.end(),greater<int>());
+        for(int i = 0 ; i < nums.size(); i++){
+            if(i ==0 ){
+                int ath = mpp[nums[i]];
+                result[ath] = "Gold Medal";
+            }
+            else if(i == 1 ){
+                int ath = mpp[nums[i]];
+                result[ath] = "Silver Medal";
+            }
+            else if(i == 2 ){
+                int ath = mpp[nums[i]];
+                result[ath] = "Bronze Medal";
+            }
+            else{
+                int ath = mpp[nums[i]];
+                result[ath] = to_string(i+1);
+            }
+        }
+        return result;
+    }
 };
