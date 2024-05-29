@@ -1,33 +1,35 @@
 class Solution {
 public:
-    int convert(long long n) {
-        int dec = 0, i = 0, rem;
+    void addOne(string &s) {
+        int i = s.length()-1;
 
-        while (n!=0) {
-            rem = n % 10;
-            n /= 10;
-            dec += rem * pow(2, i);
-            ++i;
+        while(i >= 0 && s[i] != '0') {
+            s[i] = '0';
+            i--;
         }
 
-        return dec;
+        if(i < 0) {
+            s = '1' + s;
+        } else {
+            s[i] = '1';
+        }
     }
+
     int numSteps(string s) {
-        int num = stoi(s);
-        int decVal = convert(num);
-        int cnt = 0 ;
-        while(decVal != 1){
-            if(decVal% 2 == 1){
-                decVal += 1;
-                cnt++;
+        int op = 0;
+
+        while(s.length() > 1) {
+            int n = s.length();
+
+            if(s[n-1] == '0') {
+                s.pop_back();
+            } else {
+                addOne(s);
             }
-            else if(decVal % 2 == 0){
-                decVal /= 2;
-                cnt++;
-            }
+
+            op++;
         }
 
-        return cnt;
-
+        return op;
     }
 };
