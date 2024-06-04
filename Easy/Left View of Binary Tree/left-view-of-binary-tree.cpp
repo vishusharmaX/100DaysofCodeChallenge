@@ -128,27 +128,27 @@ struct Node
  */
 
 //Function to return a list containing elements of left view of the binary tree.
-vector<int> ans;
 
-void solve(Node* root, int level) {
-    if (root == nullptr)
+void solve(Node * root , vector<int>& ans, int level){
+    if(root==NULL)
         return;
-
-    // Check if the current level is equal to the size of ans
-    // If so, it means this is the leftmost node at this level
-    if (level == ans.size())
+    
+    if(ans.size() == level){
         ans.push_back(root->data);
-
-    // Traverse left subtree first
-    solve(root->left, level + 1);
-    // Then traverse right subtree
-    solve(root->right, level + 1);
+    }
+    
+    solve(root->left,ans,level+1);
+    solve(root->right,ans,level+1);
+    
 }
 
-vector<int> leftView(Node* root) {
-    // Clear the ans vector before processing a new tree
-    ans.clear();
-    // Start solving from the root at level 0
-    solve(root, 0);
-    return ans;
+
+
+vector<int> leftView(Node *root)
+{
+   // Your code here
+   vector<int>ans;
+   solve(root,ans,0);
+   
+   return ans;
 }
