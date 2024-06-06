@@ -4,38 +4,33 @@ using namespace std;
 
 // } Driver Code Ends
 
+#include<bits/stdc++.h>
+
 class Solution {
   public:
     // Function to return a list containing the DFS traversal of the graph.
-    void dfs(int node , vector<int> adj[],vector<bool>&visited, vector<int>&ans){
+    
+    void dfs(int node , vector<int>adj[] ,vector<bool>&visited,vector<int>&ans){
         
         visited[node] = true;
         ans.push_back(node);
-        
-        for(int neighr : adj[node]){
-            if(!visited[neighr])
-                dfs(neighr,adj,visited,ans);
+        for(int i = 0; i < adj[node].size(); i++){
+            if(!visited[adj[node][i]])
+                dfs(adj[node][i], adj,visited,ans);
         }
         
     }
-    
-    
     
     vector<int> dfsOfGraph(int V, vector<int> adj[]) {
         // Code here
         vector<bool>visited(V,false);
         vector<int>ans;
-        for(int i= 0 ; i < V; i++){
-            if(!visited[i]){
-                dfs(i,adj,visited,ans);
-            }
-        }
+        
+        dfs(0,adj,visited,ans);
         
         return ans;
     }
 };
-
-
 
 //{ Driver Code Starts.
 int main() {
