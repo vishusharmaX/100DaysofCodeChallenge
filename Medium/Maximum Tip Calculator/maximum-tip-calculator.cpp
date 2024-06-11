@@ -24,40 +24,36 @@ class Array {
 // } Driver Code Ends
 
 class Solution {
-public:
-    long long maxTip(int n, int x, int y, vector<int>& arr, vector<int>& brr) {
-        // Create a vector to store orders and their respective tips difference
-        vector<pair<int, pair<int, int>>> orders;
-        
-        for (int i = 0; i < n; ++i) {
-            orders.push_back({abs(arr[i] - brr[i]), {arr[i], brr[i]}});
+  public:
+    long long maxTip(int n, int x, int y, vector<int> &arr, vector<int> &brr) {
+        // code here
+        vector<pair<int, pair<int, int>>>ans;
+        long long totaltip = 0;
+       for (int i = 0; i < n; ++i) {
+            ans.push_back({abs(arr[i] - brr[i]), {arr[i], brr[i]}});
         }
         
-        // Sort orders based on the absolute difference in descending order
-        sort(orders.begin(), orders.end(), greater<pair<int, pair<int, int>>>());
+        sort(ans.begin(),ans.end(),greater<pair<int, pair<int, int>>>());
         
-        long long totalTip = 0;
-        
-        for (int i = 0; i < n; ++i) {
-            int tipA = orders[i].second.first;
-            int tipB = orders[i].second.second;
+        for(int i = 0 ; i < ans.size(); i++){
             
-            // Assign order to A if it maximizes the tip and A can still take orders
-            if ((tipA >= tipB && x > 0) || y == 0) {
-                totalTip += tipA;
+            long long tipA = ans[i].second.first;
+            long long tipB = ans[i].second.second;
+            
+            if((tipA>=tipB && x > 0) || y==0){
+                totaltip +=tipA;
                 x--;
             }
-            // Otherwise, assign order to B if B can take orders
-            else if (y > 0) {
-                totalTip += tipB;
+            else{
+                totaltip+=tipB;
                 y--;
             }
+            
         }
         
-        return totalTip;
+        return totaltip;
     }
 };
-
 
 
 //{ Driver Code Starts.
