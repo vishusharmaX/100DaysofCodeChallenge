@@ -4,34 +4,40 @@ using namespace std;
 typedef long long int ll;
 
 // } Driver Code Ends
+
 class Solution
 {
     public:
     //Function to find the maximum money the thief can get.
     
-    int solve(int ind,int arr[] ,vector<int>&dp){
+    int solve(int arr[], int indx,vector<int>&dp){
         
-        if(ind == 0) return arr[ind];
-        if(ind < 0) return 0;
+        if(indx < 0)
+            return 0;
+            
+        if(indx == 0)
+            return arr[0];
         
-        if(dp[ind] != -1){
-            return dp[ind];
-        }
+        if(dp[indx] !=  -1)
+            return dp[indx];
         
-        int pick = arr[ind] + solve(ind-2,arr,dp);
-        int ntpick = 0 + solve(ind-1,arr,dp);
+        int include = solve(arr,indx-2,dp) + arr[indx];
+        int exclude = solve(arr,indx-1,dp) + 0;
         
-        return dp[ind] = max(pick,ntpick);
+        return dp[indx] = max(include,exclude);
         
     }
     
+    
     int FindMaxSum(int arr[], int n)
     {
-       vector<int> dp(n+1,-1);
-       
-       return solve(n-1,arr,dp);
+        // Your code here
+        vector<int>dp(n,-1);
+        return solve(arr,n-1,dp);
+        
     }
 };
+
 
 //{ Driver Code Starts.
 int main()
