@@ -1,22 +1,25 @@
 class Solution {
 public:
-    int solve(int ind , vector<int>& nums,vector<int>&dp){
-        if(ind == 0)
-            return nums[0];
-        if(ind == -1)
-            return 0;
-        
-        if(dp[ind] != -1)
-            return dp[ind];
-        
-        int take = nums[ind] + solve(ind-2,nums,dp);
-        int nottake = 0 + solve(ind-1,nums,dp);
+    int solve(vector<int>&nums,int indx,vector<int>&dp){
 
-        return dp[ind] = max(take,nottake);
+        if(indx < 0){
+            return 0;
+        }
+        if(indx  == 0)
+            return nums[0];
+        
+        if(dp[indx] != -1)
+            return dp[indx];
+
+        int include = solve(nums,indx-2,dp) + nums[indx];
+        int exclude = solve(nums,indx-1,dp) + 0 ;
+
+        return dp[indx] = max(include,exclude);
     }
     int rob(vector<int>& nums) {
         int n = nums.size();
-        vector<int>dp(n+1,-1);
-        return solve(n-1,nums,dp);
+        vector<int>dp(n,-1);
+        return solve(nums,n-1,dp);
+
     }
 };
