@@ -6,14 +6,13 @@ public:
         for (int i = 0; i < nums.size(); i++) {
 
             if (currSum < 0) {
-                currSum = 0;
-            } 
-                currSum += nums[i];
-            
+                currSum = nums[i];
+            } else {
+                currSum = currSum +  nums[i];
+            }
+
             maxi = max(maxi, currSum);
         }
-        if (nums[0] == -1)
-            return -1;
         return maxi;
     }
 };
