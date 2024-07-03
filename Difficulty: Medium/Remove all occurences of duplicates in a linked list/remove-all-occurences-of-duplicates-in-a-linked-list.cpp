@@ -32,19 +32,26 @@ class Solution {
   public:
     Node* removeAllDuplicates(struct Node* head) {
         // code here
-        if(!head) return head;
-        Node* temp=head;
-        while(temp->next && temp->next->data==temp->data)
-        temp=temp->next;
-        if(temp==head)
-        {
-            head->next = removeAllDuplicates(head->next);
-            return head;
+        map<int,int>mpp;
+        while(head != NULL){
+            mpp[head->data]++;
+            head = head->next;
         }
-        else
-        return removeAllDuplicates(temp->next);
-}
+        Node * dummyNode = new Node(-1);
+        Node * result = dummyNode;
+        for(auto it : mpp){
+            if(it.second == 1){
+                Node * nnode = new Node(it.first);
+                result->next = nnode;
+                result = nnode;
+            }
+        }
+        
+        return dummyNode->next;
+    }
 };
+
+
 
 //{ Driver Code Starts.
 /* Function to print linked list */
