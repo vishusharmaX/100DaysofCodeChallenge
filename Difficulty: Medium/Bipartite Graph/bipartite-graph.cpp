@@ -9,36 +9,31 @@ public:
 	    // Code here
 	    vector<int>color(V,-1);
 	    queue<int>q;
-	   
 	    
-	    for(int i = 0 ; i < V; i++){
+	    for(int i = 0; i < V; i++){
 	        if(color[i] == -1){
-	             q.push(i);
-	             color[i] = 0;
-	        while(!q.empty()){
-	        int node = q.front();
-	        q.pop();
-	        
-	        for(int i = 0 ; i < adj[node].size(); i++){
-	            //color not assigned
-	            if(color[adj[node][i]] == -1){
+	            q.push(i);
+	            color[i] = 1;
+	            while(!q.empty()){
+	                int node = q.front();
+	                q.pop();
 	                
-	                color[adj[node][i]] = (color[node] +1)%2;
-	                q.push(adj[node][i]);
+	                for(int i = 0 ; i < adj[node].size(); i++){
+	                    if(color[adj[node][i]] == -1){
+	                        q.push(adj[node][i]);
+	                        
+	                        color[adj[node][i]] = (color[node] +1 )%2;
+	                    }
+	                    else{
+	                        if(color[adj[node][i]] == color[node])
+	                            return 0;
+	                    }
+	                }
 	            }
-	            
-	            ///color assigned h
-	           else{
-	                if(color[node] == color[adj[node][i]])
-	                   return 0;
-	           }
-	        }
-	    }
 	        }
 	    }
 	    
 	    return 1;
-	    
 	}
 
 };
