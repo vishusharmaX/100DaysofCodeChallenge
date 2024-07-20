@@ -1,19 +1,25 @@
 class Solution {
 public:
     vector<vector<int>> restoreMatrix(vector<int>& rowSum, vector<int>& colSum) {
-        int row = rowSum.size();
-        int col = colSum.size();
-        vector<vector<int>> matrix(row,vector<int>(col,0));
+        int n = rowSum.size();
+        int m = colSum.size();
 
-        for(int i = 0 ; i < row ; i++){
-            for(int  j= 0; j < col ; j++){
-                int value = min(rowSum[i],colSum[j]);
-                matrix[i][j] = value;
-                rowSum[i]-=value;
-                colSum[j]-=value;
-            }
+        int i = 0, j = 0;
+        vector<vector<int>>mat(n,vector<int>(m,0));
+
+        while(i < n&& j < m){
+            mat[i][j] = min(rowSum[i],colSum[j]);
+            rowSum[i]-=mat[i][j];
+            colSum[j]-=mat[i][j];
+
+            if(rowSum[i] ==0 )
+                i++;
+            
+            else
+                j++;
+
         }
 
-        return matrix;
+        return mat;
     }
 };
