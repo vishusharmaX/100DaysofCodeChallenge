@@ -1,47 +1,43 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-    unordered_map<char, int> target, window;
-    int required = t.size();
-    int left = 0, right = 0;
-    int minLen = INT_MAX, minStart = 0;
-
-    for (char ch : t) {
-        target[ch]++;
-    }
-
-    while (right < s.size()) {
-        char currentChar = s[right];
-
-        if (target.count(currentChar)) {
-            window[currentChar]++;
-
-            if (window[currentChar] <= target[currentChar]) {
-                required--;
-            }
+        int i = 0 , j = 0;
+        int n = s.length();
+        map<char,int>mpp;
+        for(auto it : t){
+            mpp[it]++;
         }
-
-        while (required == 0) {
-            if (right - left + 1 < minLen) {
-                minLen = right - left + 1;
-                minStart = left;
+        int count = mpp.size();
+        int maxlen = INT_MAX, start = 0;
+        while(j < n){
+            if(mpp.find(s[j])!= mpp.end()){
+                mpp[s[j]]--;
+                if(mpp[s[j]]==0)
+                    count--;
             }
-
-            char leftChar = s[left];
-
-            if (target.count(leftChar)) {
-                window[leftChar]--;
-                if (window[leftChar] < target[leftChar]) {
-                    required++;
+            if(count == 0){
+                while(count == 0){
+                    if(maxlen > ( j-i+1)){
+                        maxlen = j-i+1;
+                        start = i;
+                    }
+                    if(mpp.find(s[i])!= mpp.end()){
+                        mpp[s[i]]++;
+                        if(mpp[s[i]] > 0){
+                            count++;
+                        }
+                    }
+                    i++;
                 }
             }
+        j++;
 
-            left++;
         }
 
-        right++;
-    }
+        if(maxlen == INT_MAX)
+            return "";
 
-    return minLen == INT_MAX ? "" : s.substr(minStart, minLen);
-}
+        return s.substr(start,maxlen);
+
+    }
 };
