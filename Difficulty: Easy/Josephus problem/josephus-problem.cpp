@@ -10,17 +10,22 @@ using namespace std;
 class Solution
 {
     public:
-    int solve(int n , int k){
-        
-        if( n== 0)
-            return 0;
-        
-        return (solve(n-1,k)+k)%n;
-        
-    }
     int josephus(int n, int k)
     {
-      return solve(n,k)+1;
+       //Your code here
+       vector<int>ans(n);
+       for(int i = 0; i < n; i++){
+           ans[i] = i +1;
+       }
+       
+       int i = 0;
+       while(ans.size() > 1){
+           int indx = (i+k-1)%ans.size();
+           ans.erase(ans.begin()+ indx);
+           i = indx;
+       }
+       
+       return ans[0];
     }
 };
 
