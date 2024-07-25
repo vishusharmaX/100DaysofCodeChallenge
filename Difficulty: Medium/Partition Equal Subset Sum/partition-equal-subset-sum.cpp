@@ -9,18 +9,18 @@ using namespace std;
 
 class Solution{
 public:
-    bool subset(int arr[], int n,int sum){
-        // int n = arr.size();
-        vector<vector<bool>>dp(n+1,vector<bool>(sum+1,false));
+    
+    bool subset(int arr[], int n , int total){
         
-        for(int i = 0; i<n+1; i++){
-            dp[i][0] = true;
+        vector<vector<int>>dp(n+1,vector<int>(total+1,0));
+        for(int i = 0; i < n+1; i++){
+            dp[i][0] = 1;
         }
         
         for(int i = 1; i < n+1; i++){
-            for(int j = 1; j< sum+1; j++){
+            for(int j = 1; j < total+1; j++){
                 if(arr[i-1] <= j){
-                    dp[i][j] = dp[i-1][j-arr[i-1]] || dp[i-1][j];
+                    dp[i][j] = dp[i-1][j] || dp[i-1][j-arr[i-1]];
                 }
                 else{
                     dp[i][j] = dp[i-1][j];
@@ -28,21 +28,23 @@ public:
             }
         }
         
-        return dp[n][sum];
+        return dp[n][total];
+        
     }
-
+        
     int equalPartition(int N, int arr[])
     {
-        // code here
-        int sum = 0;
-        for(int i = 0 ; i < N; i++)
-        sum+=arr[i];
+        int total = 0;
+        for(int i = 0; i < N; i++){
+            total += arr[i];
+        }
         
-        if(sum%2 != 0)
+        if(total%2 != 0){
             return false;
+        }
         
         else{
-            return subset(arr,N,sum/2);
+            return subset(arr,N,total/2);
         }
     }
 };
