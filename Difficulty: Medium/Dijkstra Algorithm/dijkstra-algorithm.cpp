@@ -3,8 +3,6 @@
 using namespace std;
 
 // } Driver Code Ends
-
-
 class Solution
 {
 	public:
@@ -13,38 +11,37 @@ class Solution
     vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         // Code here
-        vector<bool>Explored(V,0);
+        vector<int>explored(V,0);
         vector<int>dist(V,INT_MAX);
         
         dist[S] = 0;
         
         int cnt = V;
-        
         while(cnt--){
             
-        int node = -1 , value = INT_MAX;
-        for(int i = 0 ; i < V; i++){
-            if(!Explored[i] && value > dist[i] ){
+        int node = -1, value = INT_MAX;
+        
+        for(int i = 0; i < V; i++){
+            if(!explored[i] && value > dist[i]){
                 node = i;
                 value = dist[i];
             }
         }
         
-        Explored[node] = 1;
+        explored[node] = 1;
         
-        for(int j = 0; j < adj[node].size(); j++){
-            int neig = adj[node][j][0];
-            int weight = adj[node][j][1];
-            if(!Explored[neig] && weight + dist[node] < dist[neig]){
-                dist[neig] = weight + dist[node]; 
+        for(int i= 0 ; i < adj[node].size(); i++){
+            int neighbour = adj[node][i][0];
+            int weight = adj[node][i][1];
+            if(!explored[neighbour] && dist[node] + weight < dist[neighbour] ){
+                dist[neighbour] = dist[node] + weight;
             }
         }
         
         }
-    
+        
         
         return dist;
-        
         
     }
 };
