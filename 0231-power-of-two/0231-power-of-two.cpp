@@ -3,10 +3,6 @@ public:
     bool isPowerOfTwo(int n) {
         if(n == 0 || n < 0)
             return false;
-        int ans = n & n-1;
-        if(ans == 0)
-            return true;
-        
-        return false;
+        return n && !(n &(n-1));
     }
 };
