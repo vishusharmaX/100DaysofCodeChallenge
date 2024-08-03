@@ -7,39 +7,31 @@ class Solution
 {
 	public:
 	//Function to return list containing vertices in Topological order. 
-	void solve(int node, vector<int>adj[] ,vector<int>&ans,vector<bool>&visited){
-	    
+	
+	void solve(int node,vector<int> adj[],vector<int>&visited,vector<int>&ans ){
 	    visited[node] = 1;
-	    //cout<<node<<"adfd";
-	    for(int i = 0 ; i < adj[node].size(); i++){
-	        if(!visited[adj[node][i]]){
-	            solve(adj[node][i],adj,ans,visited);
-	        }
+	    
+	    for(int i = 0; i < adj[node].size(); i++){
+	        if(!visited[adj[node][i]])
+	            solve(adj[node][i],adj,visited,ans);
 	    }
-	    
 	    ans.push_back(node);
-	    
-	    
 	}
 	
 	
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
+	    // code here
+	    vector<int>visited(V,0);
 	    vector<int>ans;
-	    vector<bool>visited(V,0);
-	    for(int i=0;i<V;i++){
-	        if(!visited[i]){
-	            solve(i,adj,ans,visited);
-	        }
+	    for(int i = 0; i < V; i++){
+	        if(!visited[i])
+	            solve(i,adj,visited,ans);
 	    }
-	    
-	    
 	    reverse(ans.begin(),ans.end());
-	   // for(auto it: ans){
-	   //     cout<<it<<" ";
-	   // }
-	   // cout<<endl;
+	    
 	    return ans;
+	    
 	}
 };
 
