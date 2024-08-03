@@ -7,31 +7,33 @@ class Solution {
   public:
     // Function to detect cycle in an undirected graph.
     
-    bool solve(int node, int parent , vector<int>adj[], vector<int>&visited){
+    bool solve(int node,int parent, vector<int>adj[],vector<int>&visited){
         
         visited[node] = 1;
         
-        for(int i = 0 ; i < adj[node].size(); i++){
+        for(int i = 0; i <adj[node].size(); i++){
             if(parent  == adj[node][i])
                 continue;
-            if(visited[adj[node][i]] == 1)
+            if(visited[adj[node][i]])
                 return 1;
-            
-            if(solve(adj[node][i], node,adj,visited))
+            if(solve(adj[node][i],node,adj,visited))
                 return 1;
         }
         
         return 0;
+        
     }
     
     
     bool isCycle(int V, vector<int> adj[]) {
         // Code here
         vector<int>visited(V,0);
-        for(int i = 0 ;i < V; i++){
-             if(!visited[i] &&  solve(i,-1,adj,visited)){
-                return 1;
-             }
+        
+        for(int i = 0; i  < V; i++){
+        
+        if(!visited[i] && solve(i,-1,adj,visited) ){   
+            return 1;
+        }
         }
         
         return 0;
