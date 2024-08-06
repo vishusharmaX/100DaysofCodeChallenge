@@ -29,20 +29,25 @@ public:
         int n = grid.size();
         int m = grid[0].size();
 
-         for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             if (grid[i][0] == 1) {
                 bfs(i, 0, grid);
             }
-            if (grid[i][m-1] == 1) {
-                bfs(i, m-1, grid);
+        }
+        for (int j = 1; j < m; j++) {  // 4
+            if (grid[n-1][j] == 1) {
+                bfs(n-1, j, grid);
             }
         }
-        for (int j = 0; j < m; j++) {
+
+        for (int j = 1; j < m; j++) {  // 5
             if (grid[0][j] == 1) {
                 bfs(0, j, grid);
             }
-            if (grid[n-1][j] == 1) {
-                bfs(n-1, j, grid);
+        }
+        for (int i = 1; i < n-1; i++) {  // 6
+            if (grid[n-1][i] == 1) {
+                bfs(n-1, i, grid);
             }
         }
         int cnt = 0;
