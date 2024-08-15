@@ -7,30 +7,35 @@ using namespace std;
 class Solution
 {
 	public:
-	    void solve(string s, string temp, vector<string>&ans){
-	        if(s == ""){
-	            ans.push_back(temp);
+	    void solve(string s,int n ,int indx ,vector<string>&ans){
+	        
+	        if(indx >= n-1){
+	            ans.push_back(s);
 	            return;
 	        }
-	        set<char>st;
-	        for(int i = 0; i < s.length();i++){
-	            if(st.find(s[i]) == st.end()){
-	                st.insert(s[i]);
-    	            string newin = s.substr(0,i) + s.substr(i+1,s.length());
-    	            string newop = temp + s[i];
-    	            solve(newin,newop,ans);
+	        set<char>mpp;
+	        for(int i = indx; i < n; i++){
+	            if(mpp.find(s[i]) == mpp.end()){
+	                mpp.insert(s[i]);
+    	            swap(s[indx], s[i]);
+    	            solve(s,n,indx+1,ans);
+    	            swap(s[indx], s[i]);
+	                
 	            }
-	        }
-	        
-	        
+	        } 
+	       
+	         
 	    }
 		vector<string>find_permutation(string s)
 		{
-		   vector<string>ans;
-		   solve(s,"",ans);
+		    int  n = s.size();
+		    vector<string>ans;
+		    sort(s.begin(), s.end());
+		    solve(s,n,0,ans);
 		    return ans;
 		}
 };
+
 
 
 
