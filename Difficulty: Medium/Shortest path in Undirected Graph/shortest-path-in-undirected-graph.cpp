@@ -8,44 +8,34 @@ using namespace std;
 // User function Template for C++
 class Solution {
   public:
-    vector<int> shortestPath(vector<vector<int>>& edges, int N,int M, int src){
-        // code here
-        vector<int>adj[N];
-        vector<int>visited(N,0);
-        
-        for(int i = 0; i < edges.size(); i++){
-            int u = edges[i][0];
-            int v = edges[i][1];
-            
-            adj[u].push_back(v);
-            adj[v].push_back(u);
-        }
-        queue<int>q;
-        vector<int>ans(N,-1);
-        q.push(src);
-        visited[src] = 1;
-        ans[src] = 0;
-        
-        while(!q.empty()){
-            int node = q.front();
-            q.pop();
-            for(int i = 0; i< adj[node].size(); i++){
-                if(visited[adj[node][i]]){
-                    continue;
-                }
-                visited[adj[node][i]] = 1;
-                q.push(adj[node][i]);
-                ans[adj[node][i]] = ans[node]+1;
-            }
-        }
-        
-        
-        return ans;
+    vector<int> shortestPath(vector<vector<int>>& edges, int n,int M, int src){
+       vector<vector<int>>adj(n+1);
+       for(auto &x:edges){
+           adj[x[0]].push_back(x[1]);
+           adj[x[1]].push_back(x[0]);
+       }
+     queue<int>pq;
+       pq.push(src);
+       vector<int>dist(n,INT_MAX);
+       dist[src]=0;
+       while(!pq.empty()){
+           int node=pq.front();
+           pq.pop();
+           for(auto &x:adj[node]){
+               if(dist[x]>dist[node]+1){
+                   dist[x]=dist[node]+1;
+                   pq.push(x);
+               }
+           }
+       }
+       for(auto &x:dist) {
+           if(x==INT_MAX)x=-1;
+       }
+       return dist;
+       
         
     }
 };
-
-
 
 
 //{ Driver Code Starts.
