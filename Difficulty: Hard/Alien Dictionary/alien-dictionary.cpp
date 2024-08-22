@@ -9,54 +9,45 @@ using namespace std;
 
 class Solution{
     public:
-    string findOrder(string dict[], int N, int K) {
-        //code here
-        vector<int>adj[K];
-        vector<int>indeg(K,0);
-        for(int i= 0; i < N-1; i++){
-            string  a = dict[i] ; string b = dict[i+1];
-            int j = 0, k =0;
-            while(j < a.size() && k < b.size() && a[j] == b[k]){
-                j++;
-                k++;
-            }
-            if(j == a.size())
-               continue;
-            
-            adj[a[j]-'a'].push_back(b[k]-'a');
-            indeg[b[k]-'a']++;
-        }
+    string ans;
+    vector<bool> vis,cur;
+    unordered_set<int> g[26]; // Graph
+    
+    void topological_sort(int r) {
+        vis[r]=cur[r]=1;
+        for(int i:g[r]) 
+            if(!vis[i])
+                topological_sort(i);
         
-        queue<int>q;
-        
-        for(int i = 0 ; i < K; i++){
-            if(indeg[i] == 0)
-                q.push(i);
-        }
-        
-        string ans;
-        while(!q.empty()){
-            int node = q.front();
-            q.pop();
-            char ch = 'a' + node;
-            ans+=ch;
-            
-            for(int i = 0 ; i < adj[node].size(); i++){
-                indeg[adj[node][i]]--;
-                if(indeg[adj[node][i]] == 0)
-                    q.push(adj[node][i]);
-            }
-        }
-        
-        
+        ans=char(97+r)+ans;
+        cur[r]=0;
+    }
+    
+    string findOrder(string arr[], int N, int K) {
+        ans="";
+        vis.assign(26,0); 
+        cur=vis;
+      
+         for(int i=1;i<N;i++) {
+          string a=arr[i-1],b=arr[i];
+          int l=0,n=min(a.size(),b.size());
+          while(l<n && a[l]==b[l]) 
+                l++;
+          if(l!=n) g[a[l]-'a'].insert(b[l]-'a');
+         }
+      
+       for(int i=0;i<K;i++)
+            if(!vis[i])
+                topological_sort(i);
         return ans;
-        
     }
 };
 
 
+
 //{ Driver Code Starts.
 string order;
+
 bool f(string a, string b) {
     int p1 = 0;
     int p2 = 0;
@@ -66,7 +57,8 @@ bool f(string a, string b) {
         //	cout<<p1<<" "<<p2<<endl;
     }
 
-    if (p1 == p2 and a.size() != b.size()) return a.size() < b.size();
+    if (p1 == p2 and a.size() != b.size())
+        return a.size() < b.size();
 
     return p1 < p2;
 }
@@ -79,12 +71,14 @@ int main() {
         int N, K;
         cin >> N >> K;
         string dict[N];
-        for (int i = 0; i < N; i++) cin >> dict[i];
-        
+        for (int i = 0; i < N; i++)
+            cin >> dict[i];
+
         Solution obj;
         string ans = obj.findOrder(dict, N, K);
         order = "";
-        for (int i = 0; i < ans.size(); i++) order += ans[i];
+        for (int i = 0; i < ans.size(); i++)
+            order += ans[i];
 
         string temp[N];
         std::copy(dict, dict + N, temp);
@@ -92,10 +86,13 @@ int main() {
 
         bool f = true;
         for (int i = 0; i < N; i++)
-            if (dict[i] != temp[i]) f = false;
+            if (dict[i] != temp[i])
+                f = false;
 
-        if(f)cout << 1;
-        else cout << 0;
+        if (f)
+            cout << 1;
+        else
+            cout << 0;
         cout << endl;
     }
     return 0;
