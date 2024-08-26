@@ -1,24 +1,37 @@
 class Solution {
 public:
-    bool isMatch(string s, string p) {
-        int m = s.length(), n = p.length();
-        int i = 0, j = 0, asterick = -1, match;
-        while (i < m) {
-            if (j < n && p[j] == '*') {
-                match = i;  
-                asterick = j++;
-            }
-            else if (j < n && (s[i] == p[j] || p[j] == '?')) {
-                i++;
-                j++;
-            }
-            else if (asterick >= 0) {
-                i = ++match;
-                j = asterick + 1;
-            }
-            else return false;
+    bool solve(string &s, string &p, int i, int j, vector<vector<int>>&dp){
+
+        if(i < 0 && j < 0){
+            return true;
         }
-        while (j < n && p[j] == '*') j++;
-        return j == n;
-    }
+        if(i >= 0 && j < 0){
+            return false;
+        }
+        if(i < 0 && j >=0){
+            for(int k = 0; k <=j; k++){
+                if(p[k] != '*'){
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        if(dp[i][j] != -1){
+            return dp[i][j];
+        }
+        if(s[i] == p[j] || p[j] == '?'){
+            return dp[i][j] = solve(s,p,i-1,j-1,dp);
+        }
+        else if(p[j] == '*'){
+            return dp[i][j] = (solve(s,p,i-1,j,dp) || solve(s,p,i,j-1,dp));
+        }
+        else
+            return false;
+
+    }
+    bool isMatch(string s, string p) {
+        vector<vector<int>>dp(s.length(),vector<int>(p.length(),-1));
+        return solve(s,p,s.length()-1,p.length()-1,dp);
+    }
 };
