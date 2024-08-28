@@ -10,31 +10,35 @@ class Solution
 {
     public:
     //Function to find the largest number after k swaps.
-    void solve(string s, int k , string &res, int start){
-        if(k == 0 || start == s.length()-1)
-            return ;
+    void solve(string &s, string &res, int start, int k){
         
+        if(k == 0 || start>=s.size()-1)
+            return;
         char ch = *max_element(s.begin()+start,s.end());
-        for(int i =start+1; i < s.length();i++){
-            if((s[start] < s[i]) && (s[i] >= ch)){
+        for(int i=start; i<s.size() ; i++){
+            
+            if(s[i] > s[start] && s[start] < ch){
                 swap(s[start],s[i]);
+                
                 if(s.compare(res) > 0){
                     res = s;
                 }
-                solve(s,k-1,res,start+1);
+                
+                solve(s,res,start+1,k-1);
                 swap(s[start],s[i]);
             }
+            
         }
         
-        solve(s,k,res,start+1);
-        
+        solve(s,res,start+1,k);
     }
     
-    string findMaximumNum(string s, int k)
+    string findMaximumNum(string str, int k)
     {
        // code here.
-       string res = s;
-       solve(s,k,res,0);
+       string res = str;
+       solve(str,res,0,k);
+       
        return res;
     }
 };
