@@ -1,8 +1,8 @@
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
-        int prefix = 1 , suffix = 1 ;
-        int ans = INT_MIN;
+        double prefix = 1 , suffix = 1 ;
+        double ans = INT_MIN;
         int n = nums.size();
         for(int  i = 0 ; i < n ; i++){
 
