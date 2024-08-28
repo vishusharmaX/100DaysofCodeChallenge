@@ -3,39 +3,36 @@
 using namespace std;
 
 // } Driver Code Ends
-
 class Solution
 {
 	public:
-	    void solve(string s,int n ,int indx ,vector<string>&ans){
+	    void solve(string &s,int n, int indx, vector<string>&ans){
 	        
 	        if(indx >= n-1){
 	            ans.push_back(s);
 	            return;
 	        }
-	        set<char>mpp;
-	        for(int i = indx; i < n; i++){
-	            if(mpp.find(s[i]) == mpp.end()){
-	                mpp.insert(s[i]);
-    	            swap(s[indx], s[i]);
-    	            solve(s,n,indx+1,ans);
-    	            swap(s[indx], s[i]);
-	                
+	        set<char>st;
+	        for(int i = indx ; i < n; i++){
+	            if(st.find(s[i]) == st.end()){
+	                st.insert(s[i]);
+	                swap(s[indx],s[i]);
+	                solve(s,n,indx+1,ans);
+	                swap(s[indx],s[i]);
 	            }
-	        } 
-	       
-	         
+	        }
+	        
 	    }
-		vector<string>find_permutation(string s)
+	    
+		vector<string>find_permutation(string S)
 		{
-		    int  n = s.size();
+		    // Code here there
+		     int  n = S.size();
 		    vector<string>ans;
-		    sort(s.begin(), s.end());
-		    solve(s,n,0,ans);
+		    solve(S,n,0,ans);
 		    return ans;
 		}
 };
-
 
 
 
