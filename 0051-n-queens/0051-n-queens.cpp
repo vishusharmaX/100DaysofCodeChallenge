@@ -1,55 +1,56 @@
 class Solution {
 public:
-    vector<vector<string>> result;
-    int N ;
 
-    bool isValid(vector<string>&board , int row , int col){
-
-        //upward direction
-        for(int i = row-1; i>= 0 ; i--){
-            if(board[i][col] == 'Q')
+    vector<vector<string>>ans;
+    bool check(int row , int col, vector<string>&board){
+        int n =board.size();
+        //left
+        for(int i = 0; i < col;i++){
+            if(board[row][i] == 'Q')
                 return false;
         }
 
-        //upward left diagonal
-        for(int i = row-1, j = col-1; i >= 0 && j>= 0 ; i--, j--){
-            if(board[i][j] == 'Q')
-                return false;
-        }
 
-        //upward right diagonal
-        for(int i = row-1, j = col+1; i >= 0 && j < N ; i--, j++){
+        int i = row, j = col;
+        while(i >= 0 && j >= 0){
             if(board[i][j] == 'Q')
                 return false;
+            i--;
+            j--;
+        }
+        i = row, j = col;
+        while(i < n && j >= 0){
+            if(board[i][j] == 'Q')
+                return false;
+            i++;
+            j--;
         }
 
 
         return true;
 
+
+
     }
-
-    void solve(vector<string>&board , int i ){
-
-        if(i >= N){
-            result.push_back(board);
+    void solve(int colindx, vector<string>board,int n){
+        if(colindx == n){
+            ans.push_back(board);
             return;
         }
 
-        for(int col = 0 ; col < N ; col++){
-            if(isValid(board,i,col)){
-                board[i][col] = 'Q';
-                solve(board,i+1);
-                board[i][col] = '.';
+        for(int row = 0; row <n; row++){
+            if(check(row,colindx,board)){
+                board[row][colindx] = 'Q';
+                solve(colindx+1,board,n);
+                board[row][colindx] = '.';
             }
         }
 
     }
-
     vector<vector<string>> solveNQueens(int n) {
-        N = n;
         vector<string> board(n,string(n,'.'));
-        solve(board,0);
+        solve(0,board,n);
 
-        return result;
+        return ans;
     }
 };
