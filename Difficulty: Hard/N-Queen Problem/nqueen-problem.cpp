@@ -13,62 +13,63 @@ public:
     
     bool check(int rowindx, int colindx,vector<vector<int>>&board,int n){
         
-        //left check
-        for(int col = 0; col < colindx; col++){
-            if(board[rowindx][col] == 1){
+        for(int i = 0 ; i < colindx; i++){
+            if(board[rowindx][i] == 1)
                 return false;
-            }
         }
-        //diagonal 1
-        int i = rowindx ,j =colindx;
         
-        while(i>= 0 && j >=0){
+        int i = rowindx , j = colindx;
+        while(i >= 0 && j >= 0){
             if(board[i][j] == 1)
                 return false;
-            
-            i--;
-            j--;
+            else{
+                i--;
+                j--;
+            }
         }
         
-        i = rowindx, j = colindx;
+        i = rowindx,j = colindx;
         while(i < n && j >= 0){
-            if(board[i][j] == 1){
+            if(board[i][j] == 1)
                 return false;
+            else{
+                i++;
+                j--;
             }
-            i++;
-            j--;
         }
         
         
         return true;
     }
     
-    void solve(int colindx, vector<vector<int>> & board, vector<int>&temp, int n){
+    
+    
+    void solve(int colindx,vector<vector<int>>&board,vector<int>&temp, int n){
         
         if(colindx == n){
             ans.push_back(temp);
             return;
         }
         
-        for(int rowindx = 0; rowindx <n ; rowindx++){
-            if(check(rowindx,colindx,board,n)){
-                temp.push_back(rowindx+1);
-                board[rowindx][colindx] = 1;
+        
+        for(int row = 0; row < n; row++){
+            if(check(row,colindx,board,n)){
+                board[row][colindx] = 1;
+                temp.push_back(row+1);
                 solve(colindx+1,board,temp,n);
+                board[row][colindx] = 0;
                 temp.pop_back();
-                board[rowindx][colindx] = 0;
+                
             }
         }
-        
     }
     
     vector<vector<int>> nQueen(int n) {
         // code here
         vector<vector<int>>board(n,vector<int>(n,0));
         vector<int>temp;
-        solve(0,board,temp,n);    
+        solve(0,board,temp,n);
         return ans;
-        
     }
 };
 
