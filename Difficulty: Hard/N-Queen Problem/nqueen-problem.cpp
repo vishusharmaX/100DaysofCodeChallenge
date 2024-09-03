@@ -10,35 +10,34 @@ using namespace std;
 class Solution{
 public:
     vector<vector<int>>ans;
-    
-    bool check(int rowindx, int colindx,vector<vector<int>>&board,int n){
+    bool check(int row,int col,vector<vector<int>>&board, int n){
         
-        for(int i = 0 ; i < colindx; i++){
-            if(board[rowindx][i] == 1)
+        for(int i = 0; i < col ; i++){
+            if(board[row][i] == 1)
                 return false;
         }
         
-        int i = rowindx , j = colindx;
+        int i = row, j = col;
         while(i >= 0 && j >= 0){
             if(board[i][j] == 1)
                 return false;
             else{
-                i--;
-                j--;
+                
+            i--;
+            j--;
             }
         }
         
-        i = rowindx,j = colindx;
-        while(i < n && j >= 0){
-            if(board[i][j] == 1)
+        i = row, j = col;
+        while(i < n && j>=0){
+             if(board[i][j] == 1)
                 return false;
             else{
-                i++;
-                j--;
+            i++;
+            j--;
+                
             }
         }
-        
-        
         return true;
     }
     
@@ -51,7 +50,6 @@ public:
             return;
         }
         
-        
         for(int row = 0; row < n; row++){
             if(check(row,colindx,board,n)){
                 board[row][colindx] = 1;
@@ -59,9 +57,10 @@ public:
                 solve(colindx+1,board,temp,n);
                 board[row][colindx] = 0;
                 temp.pop_back();
-                
             }
         }
+        
+        
     }
     
     vector<vector<int>> nQueen(int n) {
@@ -72,6 +71,7 @@ public:
         return ans;
     }
 };
+
 
 //{ Driver Code Starts.
 
