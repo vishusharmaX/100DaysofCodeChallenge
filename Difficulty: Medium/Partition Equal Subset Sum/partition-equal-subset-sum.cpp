@@ -9,16 +9,15 @@ using namespace std;
 
 class Solution{
 public:
-    
-    bool subset(int arr[], int n , int total){
+    int solve(int n , int arr[], int total){
         
         vector<vector<int>>dp(n+1,vector<int>(total+1,0));
-        for(int i = 0; i < n+1; i++){
-            dp[i][0] = 1;
+        for(int i = 0; i <n+1; i++){
+            dp[i][0] =1;
         }
         
-        for(int i = 1; i < n+1; i++){
-            for(int j = 1; j < total+1; j++){
+        for(int i = 1; i< n+1;i++){
+            for(int j = 1;j <= total; j++){
                 if(arr[i-1] <= j){
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-arr[i-1]];
                 }
@@ -29,25 +28,22 @@ public:
         }
         
         return dp[n][total];
-        
     }
-        
     int equalPartition(int N, int arr[])
     {
         int total = 0;
-        for(int i = 0; i < N; i++){
+        for(int i = 0; i < N ; i++){
             total += arr[i];
         }
         
-        if(total%2 != 0){
+        if(total%2 != 0)
             return false;
-        }
-        
         else{
-            return subset(arr,N,total/2);
+            return solve(N,arr,total/2);
         }
     }
 };
+
 
 //{ Driver Code Starts.
 
