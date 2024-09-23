@@ -1,27 +1,27 @@
 class Solution {
 public:
-    int solve(string s, int index, vector<string>& dictionary, vector<int> &dp) {
-        if(index == s.size()) {
+    int solve(int i, string s, int n , unordered_set<string>&st){
+
+        if(i >= n){
             return 0;
         }
-        
-        if(dp[index] != -1)
-            return dp[index];
-        int a = 1e8, b = 1e8;
 
-        for (auto& word : dictionary) {
-            if (s.substr(index, word.size()) == word) {
-                a = min(a, solve(s, index + word.size(), dictionary, dp));
-            }
+        int result = 1 + solve(i+1,s,n,st);
+
+        for(int j = i; j< n; j++){
+            string curr = s.substr(i,j-i+1);
+            if(st.find(curr) != st.end())
+                result = min(result, solve(j+1,s,n,st));
         }
 
-        b = 1 + solve(s, index + 1, dictionary, dp);
-
-        return dp[index] = min(a, b);
+        return result;
 
     }
-    int minExtraChar(string s, vector<string>& dictionary) {
-        vector<int> dp(s.size() + 1, -1);
-        return solve(s, 0, dictionary, dp);
+
+    int minExtraChar(string s, vector<string>& dict) {
+        int n = s.length();
+        unordered_set<string>st(begin(dict),end(dict));
+
+        return solve(0,s,n,st);
     }
 };
