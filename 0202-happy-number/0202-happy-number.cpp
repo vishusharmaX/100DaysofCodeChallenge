@@ -1,17 +1,21 @@
 class Solution {
 public:
-    bool isHappy(int n) {
-        if(n == 1) return true;
-        if(n == 89) return false;
-    
-        long sum = 0;
+    bool solve(int n){
+        if(n == 1)
+            return true;
+        int sum = 0;
         while(n){
-            int d = n%10;
-            sum += d*d;
-            n /= 10;
+            int last_dig = n % 10;
+            sum += pow(last_dig,2);
+            n/=10;
         }
-		
-        return isHappy(sum);
+         return solve(sum);
+    }
+    bool isHappy(int n) {
+        if(n <= 9 && n != 1){
+            return false;
+        }
 
+        return solve(n);
     }
 };
