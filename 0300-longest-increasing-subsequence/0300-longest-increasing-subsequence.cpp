@@ -1,22 +1,21 @@
 class Solution {
 public:
-    int  solve(vector<int>&nums,int indx, int prev,vector<vector<int>> & dp){
+    int solve(vector<int>&nums,int indx,int prev,vector<vector<int>>&dp){
         if(indx >= nums.size()){
-            return 0;
+            return 0 ;
         }
-
+        
         if(dp[indx][prev+1] != -1)
             return dp[indx][prev+1];
 
-        //take 
+        int nottake  = solve(nums,indx+1,prev,dp);
         int take = 0;
         if(prev == -1 || nums[prev] < nums[indx]){
-            take = 1 + solve(nums,indx +1 , indx,dp);
+            take =  1 + solve(nums,indx+1,indx,dp);
         }
 
-        int notake = solve(nums,indx+1,prev,dp);
 
-        return dp[indx][prev+1] =  max(take,notake);
+        return dp[indx][prev+1]=max(take , nottake);
 
     }
     int lengthOfLIS(vector<int>& nums) {
