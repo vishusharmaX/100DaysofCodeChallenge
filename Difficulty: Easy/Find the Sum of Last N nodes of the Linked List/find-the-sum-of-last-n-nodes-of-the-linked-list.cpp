@@ -31,39 +31,40 @@ class Solution {
     // your task is to complete this function
     // function should return sum of last n nodes
     
-    int findlen(Node * head){
-        if(head == NULL)
-            return NULL;
-        int cnt = 0;
-        while(head  != NULL){
-            cnt++;
-            head = head->next;
-        }
-        
-        return cnt;
+    int findlen(Node* head) {
+    int cnt = 0;
+    while (head != NULL) {
+        cnt++;
+        head = head->next;
     }
-    
-    
-    int sumOfLastN_Nodes(struct Node* head, int n) {
-        // Code here
-           // Code here
-        int sum=0;
-        Node* curr=head;
-        for( ;curr!=NULL && n>0;curr=curr->next){
-            sum += curr->data;
-            n--;
-        }
-        Node* lnode=head;
-        
-        while(curr!=NULL){
-            sum +=curr->data;
-            curr=curr->next;
-            sum -=lnode->data;
-            lnode=lnode->next;
-        }
-        return sum;
+    return cnt;
+}
+
+// Function to find the sum of the last n nodes
+int sumOfLastN_Nodes(Node* head, int n) {
+    if (head == NULL || n <= 0) return 0;
+
+    int len = findlen(head);
+    int k = len - n;
+
+    // Traverse to the (len - n)th node
+    while (k > 0 && head != NULL) {
+        head = head->next;
+        k--;
     }
+
+    // Now sum the remaining nodes
+    int sum = 0;
+    while (head != NULL) {
+        sum += head->data;
+        head = head->next;
+    }
+
+    return sum;
+}
 };
+
+
 
 //{ Driver Code Starts.
 
