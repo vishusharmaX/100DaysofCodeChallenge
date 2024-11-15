@@ -12,19 +12,21 @@ class Solution {
     // largest elements
     int getSecondLargest(vector<int> &arr) {
         // Code Here
-        int largest=arr[0];
-        int slargest=-1;
-        for(int j=0;j<arr.size();j++){
-            if(arr[j]>largest){
-                largest=arr[j];
+        int mx1= INT_MIN, mx2 = INT_MIN;
+        
+        for(int x : arr){
+            if(x  > mx1){
+                mx2 = mx1;
+                mx1 = x;
             }
+            
+            else if(x > mx2  && x != mx1) mx2 = x;
         }
-        for(int i=0;i<arr.size();i++){
-            if(arr[i]>slargest && arr[i]!=largest){
-                slargest=arr[i];
-            }
-        }
-        return slargest;
+        
+        
+        return mx2 == INT_MIN ? -1 : mx2;
+        
+    
     }
 };
 
@@ -46,6 +48,7 @@ int main() {
         Solution ob;
         int ans = ob.getSecondLargest(arr);
         cout << ans << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
