@@ -13,17 +13,16 @@ class Solution {
         // code here
         int i = 0 , j = arr.size()-1;
         
-        while(i <j){
+        while( i < j){
             if(arr[i] == 1){
-                swap(arr[i],arr[j]);
+                swap(arr[i], arr[j]);
                 j--;
             }
-            else{
-                i++;
-            }
+           else{
+               i++;
+           }
         }
         
-        // return arr;
     }
 };
 
@@ -49,6 +48,7 @@ int main() {
             cout << arr[i] << " ";
         }
         cout << "\n";
+        cout << "~" << endl;
     }
     return 0;
 }
