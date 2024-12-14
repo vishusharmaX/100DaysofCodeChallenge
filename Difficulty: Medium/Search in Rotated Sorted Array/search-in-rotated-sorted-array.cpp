@@ -8,10 +8,11 @@ class Solution {
   public:
     int search(vector<int>& arr, int key) {
         // complete the function here
-        // sort(arr.begin(),arr.end());
-        for(int i = 0 ; i  < arr.size(); i++){
-            if(arr[i] == key)
+        
+        for(int i = 0; i < arr.size(); i++){
+            if(arr[i] == key){
                 return i;
+            }
         }
         
         return -1;
@@ -36,6 +37,7 @@ int main() {
         cin >> key;
         Solution ob;
         cout << ob.search(arr, key) << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
