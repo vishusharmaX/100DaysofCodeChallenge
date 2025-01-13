@@ -1,16 +1,17 @@
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
-        unordered_map<int,int>mpp;
-        unordered_map<int,int>occur;
-
-        for(auto i :  arr){
-            mpp[i]++;
+        map<int,int>mpp;
+        map<int,int>mpp2;
+        for(auto it : arr){
+            mpp[it]++;
         }
-        
+
         for(auto it : mpp){
-            if(occur[it.second]) return false;
-            occur[it.second]++;
+            if(mpp2.find(it.second) != mpp2.end()){
+                return false;
+            }
+            mpp2[it.second]++;
         }
 
         return true;
