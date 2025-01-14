@@ -13,16 +13,21 @@ class Solution {
         // code here
         int i = 0 , j = arr.size()-1;
         
-        while( i < j){
-            if(arr[i] == 1){
-                swap(arr[i], arr[j]);
+        while(i < j){
+            
+            while(arr[i] == 0 && i < j){
+                i++;
+            }
+            while(arr[j] == 1 && i < j){
                 j--;
             }
-           else{
-               i++;
-           }
+            
+            swap(arr[i],arr[j]);
+            i++;
+            j--;
+            
         }
-        
+    
     }
 };
 
