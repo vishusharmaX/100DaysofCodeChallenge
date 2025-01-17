@@ -10,32 +10,54 @@ using namespace std;
 
 class Solution {
   public:
-    bool ispos(vector<int> &stalls,int d,int k){
-        int c=1;
-        int last=stalls[0];
-        for (int i=1;i<stalls.size();i++){
-            if (stalls[i]-last>=d){
-                c++;
-                last=stalls[i];
+    bool issolve(vector<int>&arr, int mid , int k){
+        int cnt = 1;
+        int pos = arr[0];
+        
+        for(int i = 0; i < arr.size(); i++){
+            if(arr[i] - pos >= mid){
+                cnt++;
+                if(cnt == k){
+                    return true;
+                }
+                pos=arr[i];
             }
-            if (c>=k) return true;
         }
+        
         return false;
+        
     }
+    
     int aggressiveCows(vector<int> &stalls, int k) {
 
         // Write your code here
         sort(stalls.begin(),stalls.end());
-        int low=1;
-        int high=stalls[stalls.size()-1]-stalls[0];
-        while(low<=high){
-            int mid=(low+high)/2;
-            if (ispos(stalls,mid,k)) low=mid+1;
-            else high=mid-1;
+        int maxi = 0;
+        for(int i = 0; i < stalls.size(); i++){
+            maxi = max(maxi,stalls[i]);
         }
-        return high;
+        int s = 0 ;
+        int e = maxi;
+        int mid = s + (e-s)/2;
+        int ans = 0;
+        while(s <= e){
+            if(issolve(stalls,mid,k)){
+                ans = mid;
+                s = mid + 1;
+            }
+            else{
+                e = mid -1;
+            }
+            
+            mid = s + (e-s)/2;
+        }
+        
+        return ans;
+        
     }
 };
+
+
 
 //{ Driver Code Starts.
 
