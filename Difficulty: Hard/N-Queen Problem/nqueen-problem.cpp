@@ -4,12 +4,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 // } Driver Code Ends
 // User function Template for C++
 
-class Solution{
-public:
-    vector<vector<int>>ans;
+class Solution {
+  public:
+  vector<vector<int>>ans;
     bool check(int row,int col,vector<vector<int>>&board, int n){
         
         for(int i = 0; i < col ; i++){
@@ -62,7 +63,6 @@ public:
         
         
     }
-    
     vector<vector<int>> nQueen(int n) {
         // code here
         vector<vector<int>>board(n,vector<int>(n,0));
@@ -72,29 +72,32 @@ public:
     }
 };
 
-
 //{ Driver Code Starts.
 
-int main(){
+int main() {
     int t;
-    cin>>t;
-    while(t--){
+    cin >> t;
+    while (t--) {
         int n;
-        cin>>n;
-        
+        cin >> n;
+
         Solution ob;
         vector<vector<int>> ans = ob.nQueen(n);
-        if(ans.size() == 0)
-            cout<<-1<<"\n";
+        if (ans.size() == 0)
+            cout << -1 << "\n";
         else {
-            for(int i = 0;i < ans.size();i++){
-                cout<<"[";
-                for(int u: ans[i])
-                    cout<<u<<" ";
-                cout<<"] ";
+            sort(ans.begin(), ans.end());
+            for (int i = 0; i < ans.size(); i++) {
+                cout << "[";
+                for (int u : ans[i])
+                    cout << u << " ";
+                cout << "] ";
             }
-            cout<<endl;
+            cout << endl;
         }
+
+        cout << "~"
+             << "\n";
     }
     return 0;
 }
