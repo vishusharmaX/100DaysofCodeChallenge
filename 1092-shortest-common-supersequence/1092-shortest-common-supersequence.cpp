@@ -1,8 +1,7 @@
 class Solution {
 public:
     string shortestCommonSupersequence(string s, string t) {
-        
-        int n = s.length();
+         int n = s.length();
         int m = t.length();
         vector<vector<int>>dp(n+1,vector<int>(m+1,0));
 
@@ -17,36 +16,36 @@ public:
             }
         }
 
-        int i = n , j = m ;
-        string ans ;
-        while( i > 0 && j > 0){
+        int i = n ,  j = m;
+        string ans;
+        while(i > 0 && j> 0){
             if(s[i-1] == t[j-1]){
-                ans = s[i-1] + ans;
-                i--;
+                ans = s[i-1]+  ans;
+                i--; 
                 j--;
             }
             else{
-                if(dp[i][j-1] > dp[i-1][j]){
-                    ans = t[j-1] + ans;
+                if (dp[i][j - 1] > dp[i - 1][j]) {
+                    ans = t[j - 1] + ans;  
                     j--;
-                }
-                else{
-                    ans = s[i-1] + ans;
+                } else {
+                    ans = s[i - 1] + ans; 
                     i--;
                 }
+
             }
         }
 
-        while( i > 0){
-           ans = s[i-1] + ans;
+        while(i>0){
+            ans = s[i-1] + ans;
             i--;
         }
-        while( j > 0){
-           ans = t[j-1] + ans;
+        while(j>0){
+            ans = t[j-1] + ans;
             j--;
         }
 
+
         return ans;
-        
     }
 };
