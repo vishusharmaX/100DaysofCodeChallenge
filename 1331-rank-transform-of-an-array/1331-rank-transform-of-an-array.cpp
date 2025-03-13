@@ -11,16 +11,16 @@ public:
         }
     }
     
-    for(auto it : mpp){
-        cout<<it.first<<" "<<it.second<<endl;
-    }
+    // for(auto it : mpp){
+    //     cout<<it.first<<" "<<it.second<<endl;
+    // }
     
     
     vector<int>ans;
     
     for(int i = 0; i < arr.size(); i++){
         int num = mpp[arr[i]];
-        cout<<num<<endl;
+        // cout<<num<<endl;
         ans.push_back(num);
     }
 
