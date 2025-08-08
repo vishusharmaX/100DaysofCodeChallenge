@@ -1,20 +1,51 @@
 class Solution {
 public:
-    int search(vector<int>& nums, int target) {
-        unordered_map<int,vector<int>>mpp;
-        for (int i = 0; i < nums.size(); i++) {
-            mpp[nums[i]].push_back(i);
+    int findPivot(vector<int>&arr){
+        int n = arr.size();
+        int s = 0 ;
+        int e = n - 1;
+        int mid = s + (e-s)/2;
+        while(s < e){
+            if(arr[mid] >= arr[0]){
+                s = mid+1;
+            }
+            else{
+                e = mid;
+            }
+            mid = s + (e-s)/2;
         }
 
-        sort(nums.begin(),nums.end());
-        for(int i= 0 ; i < nums.size(); i++){
-            if(nums[i] == target){
-                if(mpp.find(nums[i]) != mpp.end()){
-                    return mpp[nums[i]][0];
-                }
+        return s;
+    }
+    int solve(int s , int e , vector<int>arr, int target){
+        int mid = s +(e-s)/2;
+        while(s <= e){
+            if(arr[mid] == target){
+                return mid;
             }
+            else if(arr[mid] > target){
+                e = mid - 1;
+            }
+            else{
+                s = mid +1;
+            }
+            mid = s + (e-s)/2;
         }
 
         return -1;
+    }
+
+    int search(vector<int>& arr, int target) {
+        int pivot = findPivot(arr);
+        int n = arr.size();
+        int ans = -1;
+        if(target >= arr[pivot] && target <= arr[n-1]){
+            ans = solve(pivot,n-1,arr,target);
+        }
+        else{
+            ans = solve(0,pivot-1,arr,target);
+        }
+
+        return ans;
     }
 };
