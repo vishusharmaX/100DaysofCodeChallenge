@@ -1,55 +1,29 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
 class Solution {
   public:
-    void solve(string s, int idx, vector<string>&ans){
-        if(idx>= s.size()-1){
-            ans.push_back(s);
+    void solve(string s , string t, vector<string>&temp){
+        map<char,int>mpp;
+        
+        if(s.length() == 0){
+            temp.push_back(t);
             return;
         }
-        set<char>st;
-        for(int i = idx; i<s.size(); i++){
-            if(st.find(s[i]) == st.end()){
-                st.insert(s[i]);
-                swap(s[idx],s[i]);
-                solve(s,idx+1,ans);
-                swap(s[idx],s[i]);
+        
+        for(int i = 0; i < s.length(); i++){
+            if(mpp.find(s[i]) == mpp.end()){
+                mpp[s[i]]++;
+                string newip = s.substr(0,i) + s.substr(i+1);
+                string newop = t + s[i];
+                solve(newip,newop,temp);
             }
         }
+        
     }
+  
     vector<string> findPermutation(string &s) {
         // Code here there
-         vector<string>ans;
+        vector<string>temp;
+        solve(s,"",temp);
+        return temp;
         
-        solve(s,0,ans);
-        return ans;
     }
 };
-
-
-//{ Driver Code Starts.
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string S;
-        cin >> S;
-        Solution ob;
-        vector<string> ans = ob.findPermutation(S);
-        sort(ans.begin(), ans.end());
-        for (auto i : ans) {
-            cout << i << " ";
-        }
-        cout << "\n";
-
-        cout << "~"
-             << "\n";
-    }
-    return 0;
-}
-
-// } Driver Code Ends
