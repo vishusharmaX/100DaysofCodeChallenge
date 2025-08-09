@@ -1,56 +1,41 @@
 class Solution {
 public:
-
-    vector<vector<string>>ans;
-    bool check(int row , int col, vector<string>&board){
-        int n =board.size();
-        //left
-        for(int i = 0; i < col;i++){
-            if(board[row][i] == 'Q')
-                return false;
+    vector<vector<string>> ans;
+    bool issafe( vector<string> board, int row, int col){
+        
+        // vertical up
+        for(int i = row-1; i >=0 ; i--){
+        if (board[i][col] == 'Q') return false;
         }
-
-
-        int i = row, j = col;
-        while(i >= 0 && j >= 0){
-            if(board[i][j] == 'Q')
-                return false;
-            i--;
-            j--;
+        
+        //digonal left
+        for(int i = row-1 , j=col-1 ; i >= 0 && j >= 0; i--,j-- ){
+            if (board[i][j] == 'Q') return false;
         }
-        i = row, j = col;
-        while(i < n && j >= 0){
-            if(board[i][j] == 'Q')
-                return false;
-            i++;
-            j--;
+        
+        //digonal right
+        for(int i = row-1 , j=col+1 ; i >= 0 && j < board.size(); i--,j++ ){
+            if (board[i][j] == 'Q') return false;
         }
-
-
         return true;
-
-
-
     }
-    void solve(int colindx, vector<string>board,int n){
-        if(colindx == n){
-            ans.push_back(board);
+    void solve(int n,int row ,vector<string>temp){
+        if(row == temp.size()){
+            ans.push_back(temp);
             return;
         }
 
-        for(int row = 0; row <n; row++){
-            if(check(row,colindx,board)){
-                board[row][colindx] = 'Q';
-                solve(colindx+1,board,n);
-                board[row][colindx] = '.';
+        for(int i = 0; i < temp.size(); i++){
+            if(issafe(temp,row,i)){
+                temp[row][i] = 'Q';
+                solve(n,row+1,temp);
+                temp[row][i] = '.';
             }
         }
-
     }
     vector<vector<string>> solveNQueens(int n) {
-        vector<string> board(n,string(n,'.'));
-        solve(0,board,n);
-
+        vector<string>temp(n,string(n,'.'));
+        solve(n,0,temp);
         return ans;
     }
 };
