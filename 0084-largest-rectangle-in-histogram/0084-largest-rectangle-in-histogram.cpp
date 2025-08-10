@@ -1,57 +1,56 @@
 class Solution {
 public:
-
-    vector<int> nextSmallerElement(vector<int>arr, int n){
+    vector<int> solve(vector<int>arr, int n){
         stack<int>st;
         st.push(-1);
-        vector<int>ans(n,0);
-        for(int i = n-1; i>=0 ; i--){
-            while( st.top() != -1 && arr[st.top()] >= arr[i])
+        vector<int>ans(n,-1);
+
+        for(int i = n-1; i>= 0; i--){
+            while(st.top() != -1 && arr[st.top()] >= arr[i]){
                 st.pop();
-            
+            }
             ans[i] = st.top();
             st.push(i);
         }
+
         return ans;
 
     }
-    vector<int> prevSmallerElement(vector<int>arr, int n){
+    vector<int> solve1(vector<int>arr, int n){
         stack<int>st;
         st.push(-1);
-        vector<int>ans(n,0);
-        for(int i=0 ; i<n ; i++){
-            while( st.top() != -1 && arr[st.top()] >= arr[i])
+        vector<int>ans(n,-1);
+
+        for(int i = 0; i < n; i++){
+            while(st.top() != -1 && arr[st.top()] >= arr[i]){
                 st.pop();
-            
+            }
             ans[i] = st.top();
             st.push(i);
         }
+
         return ans;
 
     }
-
-
     int largestRectangleArea(vector<int>& heights) {
-        int n  = heights.size();
-
-        vector<int>next(n);
-        next = nextSmallerElement(heights,n);
-
+        int n = heights.size();
+        vector<int>next(n); 
+        next = solve(heights,n);
         vector<int>prev(n);
-        prev = prevSmallerElement(heights,n);
-        int maxi = 0;
-        for(int i = 0 ; i < n; i++){
-            int l = heights[i];
-            if(next[i] == -1)
+        prev = solve1(heights,n);
+        int maxi =INT_MIN;
+        for(int i = 0; i < heights.size(); i++){
+            
+            int h = heights[i];
+            if(next[i] == -1){
                 next[i] = n;
+            }
+            int w = next[i] - prev[i] -1;
+            int area = h * w;
 
-            int b = next[i] - prev[i] - 1;
-
-            int area = l*b;
-            maxi = max(maxi,area);
-        }
+            maxi = max(area, maxi);
+        } 
 
         return maxi;
-
     }
 };
