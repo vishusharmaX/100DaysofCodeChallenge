@@ -1,29 +1,30 @@
 class Solution {
   public:
-    void solve(string s , string t, vector<string>&temp){
-        map<char,int>mpp;
-        
-        if(s.length() == 0){
-            temp.push_back(t);
+    vector<string>ans;
+    
+    void solve(string &s, int indx, string temp){
+        if(indx >= s.length()){
+            ans.push_back(temp);
             return;
         }
-        
-        for(int i = 0; i < s.length(); i++){
+        map<char,int>mpp;
+        for(int i = indx ; i<s.length(); i++){
             if(mpp.find(s[i]) == mpp.end()){
                 mpp[s[i]]++;
-                string newip = s.substr(0,i) + s.substr(i+1);
-                string newop = t + s[i];
-                solve(newip,newop,temp);
+                swap(s[indx],s[i]);
+                solve(s,indx+1,temp+s[indx]);
+                swap(s[indx],s[i]);
             }
+            
+            
         }
         
     }
-  
+    
     vector<string> findPermutation(string &s) {
         // Code here there
-        vector<string>temp;
-        solve(s,"",temp);
-        return temp;
-        
+        string temp;
+        solve(s,0,temp);
+        return ans;
     }
 };
