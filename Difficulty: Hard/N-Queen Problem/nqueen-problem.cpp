@@ -1,104 +1,72 @@
-//{ Driver Code Starts
-// Initial Template for C++
-
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
 // User function Template for C++
 
 class Solution {
   public:
-  vector<vector<int>>ans;
-    bool check(int row,int col,vector<vector<int>>&board, int n){
+    vector<vector<int>>ans;
+    
+    bool issafe(vector<vector<int>>&board, int col, int n, int row){
         
-        for(int i = 0; i < col ; i++){
-            if(board[row][i] == 1)
-                return false;
-        }
         
-        int i = row, j = col;
-        while(i >= 0 && j >= 0){
-            if(board[i][j] == 1)
+        //left
+        for(int i = row-1,j = col-1; i >= 0 && j >= 0 ; i--,j--){
+            if(board[i][j] == 1){
                 return false;
-            else{
-                
-            i--;
-            j--;
             }
         }
         
-        i = row, j = col;
-        while(i < n && j>=0){
-             if(board[i][j] == 1)
-                return false;
-            else{
-            i++;
-            j--;
-                
-            }
+        
+        //right
+        
+        for(int i = row-1 , j = col+1; i >= 0 && j < n; i--,j++){
+            if(board[i][j] == 1) return false;
         }
+        
+        
+        //vertical upward;
+        for(int i = row; i >= 0 ; i--){
+            if(board[i][col] == 1) return false;
+        }
+        
+        
         return true;
+        
+                
     }
     
     
-    
-    void solve(int colindx,vector<vector<int>>&board,vector<int>&temp, int n){
-        
-        if(colindx == n){
+    void solve( vector<vector<int>>&board,int n, int row){
+        if(row == n){
+            vector<int>temp;
+            for(int i = 0; i < n; i++){
+                for(int j = 0; j < n; j++){
+                    if(board[i][j] == 1){
+                        temp.push_back(j+1);
+                    }
+                }
+            }
+            
             ans.push_back(temp);
+            
             return;
         }
         
-        for(int row = 0; row < n; row++){
-            if(check(row,colindx,board,n)){
-                board[row][colindx] = 1;
-                temp.push_back(row+1);
-                solve(colindx+1,board,temp,n);
-                board[row][colindx] = 0;
-                temp.pop_back();
+        
+        for(int i = 0; i < n; i++){
+            if(issafe(board,i,n,row)){
+                board[row][i] = 1;
+                solve(board,n,row+1);
+                board[row][i] = 0;
             }
         }
-        
-        
     }
+    
+    
     vector<vector<int>> nQueen(int n) {
         // code here
-        vector<vector<int>>board(n,vector<int>(n,0));
-        vector<int>temp;
-        solve(0,board,temp,n);
-        return ans;
+        vector<vector<int>> board(n, vector<int>(n,0));
+         
+         solve(board, n, 0);
+         return ans;
+        
     }
 };
-
-//{ Driver Code Starts.
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-
-        Solution ob;
-        vector<vector<int>> ans = ob.nQueen(n);
-        if (ans.size() == 0)
-            cout << -1 << "\n";
-        else {
-            sort(ans.begin(), ans.end());
-            for (int i = 0; i < ans.size(); i++) {
-                cout << "[";
-                for (int u : ans[i])
-                    cout << u << " ";
-                cout << "] ";
-            }
-            cout << endl;
-        }
-
-        cout << "~"
-             << "\n";
-    }
-    return 0;
-}
-// } Driver Code Ends
