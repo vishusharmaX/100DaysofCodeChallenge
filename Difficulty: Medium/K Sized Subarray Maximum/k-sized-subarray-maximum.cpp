@@ -1,72 +1,40 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
-
 class Solution {
   public:
     vector<int> maxOfSubarrays(vector<int>& arr, int k) {
         // code here
-        vector<int>ans;
+        int n = arr.size();
         deque<int>dq;
-        
-        int i = 0 , j = 0;
-        
-        while(j < arr.size()){
-             while(!dq.empty() && arr[j] >= arr[dq.back()])
+        vector<int>ans;
+        for(int i  = 0; i < k; i++){
+            // cout<<arr[i]<<" ";
+            // cout<<endl;
+            while(!dq.empty() && arr[dq.back()] < arr[i]){
                 dq.pop_back();
-                
-            dq.push_back(j);
-            if(j-i+1 == k){
-                ans.push_back(arr[dq.front()]);
-               if(dq.front() == i){
-                   dq.pop_front();
-               }
-                i++;
             }
-            j++;
+            dq.push_back(i);
+        }
+        
+        // cout<<"f ele"<<dq.front();
+        ans.push_back(arr[dq.front()]);
+        
+        
+        for(int i=k; i< n; i++){
+            while(!dq.empty() && i - dq.front() >= k){
+                dq.pop_front();
+            }
+            
+            
+            while(!dq.empty() && arr[dq.back()] < arr[i]){
+                dq.pop_back();
+            }
+            
+            dq.push_back(i);
+            ans.push_back(arr[dq.front()]);
+            
+            
         }
         
         return ans;
         
     }
 };
-
-
-//{ Driver Code Starts.
-
-int main() {
-    int t;
-    cin >> t;
-    cin.ignore(); // Ignore newline character after t
-
-    while (t--) {
-        vector<int> arr;
-        int k;
-        string inputLine;
-
-        getline(cin, inputLine); // Read the array input as a line
-        stringstream ss(inputLine);
-        int value;
-        while (ss >> value) {
-            arr.push_back(value);
-        }
-
-        cin >> k;
-        cin.ignore(); // Ignore newline character after k input
-
-        Solution obj;
-        vector<int> res = obj.maxOfSubarrays(arr, k);
-        for (int i = 0; i < res.size(); i++)
-            cout << res[i] << " ";
-        cout << endl;
-        cout << "~"
-             << "\n";
-    }
-
-    return 0;
-}
-
-// } Driver Code Ends
