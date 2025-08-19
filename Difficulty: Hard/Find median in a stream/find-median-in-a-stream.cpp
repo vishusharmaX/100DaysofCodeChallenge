@@ -1,62 +1,40 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
-
 class Solution {
   public:
     vector<double> getMedian(vector<int> &arr) {
-        vector<double> ans;
-        multiset<int> s;
-        auto it = s.begin();
-    
-        for (int i = 0; i < arr.size(); i++){
-            s.insert(arr[i]);
-            
-            if (i == 0) it = s.begin();  
-            else if (arr[i] >= *it && i % 2 == 0) ++it;  
-            else if (arr[i] < *it && i % 2 == 1) --it;  
-            
-    
-            if (i % 2 == 0){
-                ans.push_back((double)(*it));  
-            } 
-            else{
-                auto nextIt = next(it);
-                ans.push_back((*it + *nextIt) / 2.0);  
+        // code here
+         vector<double>ans;
+        priority_queue<int>maxh;
+        priority_queue<int,vector<int>,greater<int>>minh;
+        
+        for(int i = 0; i < arr.size(); i++){
+            int num = arr[i];
+            if(maxh.empty() || num <= maxh.top()){
+                maxh.push(arr[i]);
+            }else{
+                minh.push(arr[i]);
             }
+           
+            //balance the heaps
+             if(maxh.size() > minh.size()+1){
+                minh.push(maxh.top());
+                maxh.pop();
+            }
+            else if(minh.size() > maxh.size()){
+                maxh.push(minh.top());
+                minh.pop();
+            }
+            
+            
+            
+            if (maxh.size() == minh.size()) {
+                double med = (maxh.top() + minh.top()) / 2.0;
+                ans.push_back(med);
+            } else {
+                ans.push_back((double)maxh.top());
+            }
+           
         }
-    
+        
         return ans;
     }
 };
-
-
-//{ Driver Code Starts.
-int main() {
-    int t;
-    cin >> t;
-    cin.ignore();
-    while (t--) {
-
-        string s;
-        getline(cin, s);
-        stringstream ss(s);
-        vector<int> nums;
-        int num;
-        while (ss >> num) {
-            nums.push_back(num);
-        }
-        Solution ob;
-        vector<double> ans = ob.getMedian(nums);
-        cout << fixed << setprecision(1);
-        for (auto &i : ans)
-            cout << i << " ";
-        cout << "\n";
-        cout << "~" << endl;
-    }
-    return 0;
-}
-// } Driver Code Ends
