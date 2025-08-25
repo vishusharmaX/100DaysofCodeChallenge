@@ -1,36 +1,45 @@
-//{ Driver Code Starts
-// Initial Template for C++
-
-#include <bits/stdc++.h>
-using namespace std;
-
-// } Driver Code Ends
-// User function Template for C++
-
-class Solution{
-public:
-    int solve(int n , int arr[], int total){
+class Solution {
+  public:
+    
+    
+    bool solve(int n, vector<int>&arr,int sum){
         
-        vector<vector<int>>dp(n+1,vector<int>(total+1,0));
-        for(int i = 0; i <n+1; i++){
-            dp[i][0] =1;
-        }
-        
-        for(int i = 1; i< n+1;i++){
-            for(int j = 1;j <= total; j++){
-                if(arr[i-1] <= j){
-                    dp[i][j] = dp[i-1][j] || dp[i-1][j-arr[i-1]];
+        int t[n+1][sum+1];
+        for(int i = 0; i < n+1; i++){
+            for(int j = 0; j < sum+1; j++){
+                if(i == 0){
+                    t[i][j] = false;
                 }
-                else{
-                    dp[i][j] = dp[i-1][j];
+                if(j == 0){
+                    t[i][j] = true;
                 }
             }
         }
         
-        return dp[n][total];
+        for(int i = 1; i < n+1; i++){
+            for(int j = 1; j < sum+1; j++){
+                
+                if(arr[i-1] <= j){
+                    
+                    t[i][j] = t[i-1][j-arr[i-1]] || t[i-1][j];
+                    
+                }
+                else{
+                    t[i][j] = t[i-1][j];
+                }
+            }
+        }
+        
+        
+        return t[n][sum];
+        
+        
     }
-    int equalPartition(int N, int arr[])
-    {
+    
+    
+    bool equalPartition(vector<int>& arr) {
+        // code here
+        int   N= arr.size();
         int total = 0;
         for(int i = 0; i < N ; i++){
             total += arr[i];
@@ -43,26 +52,3 @@ public:
         }
     }
 };
-
-
-//{ Driver Code Starts.
-
-int main(){
-    int t;
-    cin>>t;
-    while(t--){
-        int N;
-        cin>>N;
-        int arr[N];
-        for(int i = 0;i < N;i++)
-            cin>>arr[i];
-        
-        Solution ob;
-        if(ob.equalPartition(N, arr))
-            cout<<"YES\n";
-        else
-            cout<<"NO\n";
-    }
-    return 0;
-}
-// } Driver Code Ends
