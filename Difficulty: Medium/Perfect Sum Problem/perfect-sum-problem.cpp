@@ -1,65 +1,29 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
-
-// } Driver Code Ends
-
-
 class Solution {
-
-public:
+  public:
     const int mod = 1000000007;
-    int perfectSum(int arr[], int n, int sum) {
-
-        vector<vector<int>> dp(n + 1, vector<int>(sum + 1, 0));
-        
-        for (int i = 0; i <= n; i++) {
-            dp[i][0] = 1; 
+    int perfectSum(vector<int>& arr, int target) {
+        // code here
+        int n = arr.size();
+        vector<vector<int>>t(n+1,vector<int>(target+1,0));
+    
+        for(int i = 0; i < n+1; i++){
+                t[i][0] = 1;
         }
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j <= sum; j++) {
-                if (arr[i - 1] <= j) {
-                    dp[i][j] = (dp[i - 1][j - arr[i - 1]] + dp[i - 1][j]) % mod;
-                } else {
-                    dp[i][j] = dp[i - 1][j];
+        
+        for(int i = 1; i < n+1;i++){
+            for(int j = 0; j < target +1;j++){
+                if(arr[i-1] <= j){
+                     t[i][j] = (t[i - 1][j - arr[i - 1]] + t[i - 1][j]) % mod;
+                }
+                else{
+                    t[i][j] = t[i-1][j];
                 }
             }
         }
-
-        return dp[n][sum];
+        
+        
+        return t[n][target];
+        
+        
     }
-
 };
-
-
-
-
-
-//{ Driver Code Starts.
-int main() 
-{
-   	
-   
-   	int t;
-    cin >> t;
-    while (t--)
-    {
-        int n, sum;
-
-        cin >> n >> sum;
-
-        int a[n];
-        for(int i = 0; i < n; i++)
-        	cin >> a[i];
-
-       
-
-	    Solution ob;
-	    cout << ob.perfectSum(a, n, sum) << "\n";
-	     
-    }
-    return 0;
-}
-
-// } Driver Code Ends
