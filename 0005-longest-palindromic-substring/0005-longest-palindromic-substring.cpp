@@ -1,12 +1,13 @@
 class Solution {
 public:
     bool solve(string& s, int i, int j) {
-        if (i >= j)
-            return true;
-        if (s[i] == s[j])
-            return solve(s, i + 1, j - 1);
-
-        return false;
+        while(i <= j){
+            if(s[i] != s[j])
+                return false;
+            i++;
+            j--;
+        }
+        return true;
     }
     string longestPalindrome(string s) {
         int maxlen = INT_MIN;
