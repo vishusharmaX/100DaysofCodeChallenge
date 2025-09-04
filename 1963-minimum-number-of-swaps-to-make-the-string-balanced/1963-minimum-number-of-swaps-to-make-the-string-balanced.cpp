@@ -1,12 +1,22 @@
 class Solution {
 public:
     int minSwaps(string s) {
-        int imbalance=0, maxImbalance=0;
-        for(char c: s){
-            if(c=='[') imbalance--;
-            else imbalance++;
-            maxImbalance=max(maxImbalance, imbalance);
+        stack<int>st;
+        for(int i = 0; i < s.length(); i++){
+            char ch  = s[i];
+            if(ch == '['){
+                st.push(ch);
+            }else{
+                if(st.empty() || st.top() == ']'){
+                    st.push(ch);
+                }else{
+                    st.pop();
+                }
+            }
         }
-        return (maxImbalance+1)/2;
+
+        int size = st.size();
+        int ans = size/2;
+        return (ans+1)/2;
     }
 };
