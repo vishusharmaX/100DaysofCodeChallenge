@@ -1,27 +1,30 @@
 class Solution {
 public:
-    string findCommon(string &common,string s ){
+    string solve(string s, string t){
+
+        string temp = "";
         int i = 0, j = 0;
-        string t="";
-        while( i < common.length() && j < s.length()){
-            if(common[i] == s[j]){
-                t.push_back(s[i]);
-                i++;
-                j++;
+        while(i < s.length() && j < t.length()){
+            if(s[i] == t[i]){
+                temp += s[i];
             }
             else{
                 break;
             }
-        }
-        return t;
-    }
-    string longestCommonPrefix(vector<string>& strs) {
-        string common = strs[0];
-        int n = strs.size();
-        for(int i = 1; i < n; i++){
-            common = findCommon(common,strs[i]);
+            i++;
+            j++;
+            
         }
 
-        return common == "" ? "" : common;
+        return temp;
+
+    }
+
+    string longestCommonPrefix(vector<string>& strs) {
+        string common = strs[0];
+        for(int i = 1; i < strs.size(); i++){
+            common = solve(common,strs[i]);
+        }
+        return common == "" ? "" :common;
     }
 };
