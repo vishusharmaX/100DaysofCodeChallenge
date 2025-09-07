@@ -1,68 +1,32 @@
-//{ Driver Code Starts
-// Initial Template for C++
-#include <bits/stdc++.h>
-#include <unordered_map>
-using namespace std;
-
-
-// } Driver Code Ends
 // User function Template for C++
 
 class Solution {
   public:
+    vector<pair<string,int>>ans;
+    map<int,string>mpp;
+    void solve(string s,int indx){
+        sort(s.begin(),s.end());
+        ans.push_back({s,indx});
+    }
     vector<vector<string>> anagrams(vector<string>& arr) {
         // code here
-        
-        vector<vector<string>> ans;
-        unordered_map<string, vector<string>> map;
-        
-        for (int i= 0; i < arr.size(); i++ ) {
-            string temp = arr[i];
-            sort(temp.begin(), temp.end());
-            map[temp].push_back(arr[i]);
+        vector<vector<string>>res;
+        for(int i = 0; i < arr.size(); i++){
+            mpp[i] = arr[i];
+            solve(arr[i],i);
+        }
+        sort(ans.begin(),ans.end());
+        int i = 0;
+        while (i < ans.size()) {
+            vector<string> temp;
+            string current_key = ans[i].first;
+            while (i < ans.size() && ans[i].first == current_key) {
+                temp.push_back(mpp[ans[i].second]);
+                i++;
+            }
             
+            res.push_back(temp);
         }
-        
-        for (auto it : map) {
-            ans.push_back(it.second);
-        }
-        
-        return ans;
+        return res;
     }
 };
-
-//{ Driver Code Starts.
-
-int main() {
-    int t;
-    cin >> t;
-    cin.ignore();
-    while (t--) {
-
-        vector<string> arr;
-        string input_line;
-        getline(cin, input_line);
-        stringstream ss(input_line);
-        string word;
-        while (ss >> word) {
-            arr.push_back(word);
-        }
-
-        Solution ob;
-        vector<vector<string> > result = ob.anagrams(arr);
-        sort(result.begin(), result.end());
-        for (int i = 0; i < result.size(); i++) {
-            for (int j = 0; j < result[i].size(); j++) {
-                cout << result[i][j] << " ";
-            }
-            cout << "\n";
-        }
-
-        cout << "~"
-             << "\n";
-    }
-
-    return 0;
-}
-
-// } Driver Code Ends
