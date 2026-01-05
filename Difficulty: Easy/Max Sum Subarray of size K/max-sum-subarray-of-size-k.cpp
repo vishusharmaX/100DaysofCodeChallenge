@@ -1,51 +1,20 @@
-//{ Driver Code Starts
-#include<bits/stdc++.h> 
-using namespace std; 
-
-// } Driver Code Ends
-class Solution{   
-public:
-    long maximumSumSubarray(int K, vector<int> &Arr , int N){
-        // code here 
-        int i=0,j=0;
-       long long sum=0;
-        long long mx=LLONG_MIN;
-        while( j < N){
-            sum+=Arr[j];
-            if(j-i+1 < K)
-            {
-                j++;
-            }
-            else if(j-i+1 ==K){
-                mx = max(mx,sum);
-                sum-=Arr[i];
+class Solution {
+  public:
+    int maxSubarraySum(vector<int>& arr, int k) {
+        // code here
+        int i = 0 , j = 0;
+        int sum = 0;
+        int mxsum = 0;
+        while(j < arr.size()){
+            sum += arr[j];
+            while(j-i+1 > k){
+                sum -= arr[i];
                 i++;
-                j++;
             }
+            mxsum = max(mxsum,sum);
+            j++;
         }
         
-        return mx;
+        return mxsum;
     }
 };
-
-//{ Driver Code Starts.
-int main() 
-{ 
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        int N,K;
-        cin >> N >> K;;
-        vector<int>Arr;
-        for(int i=0;i<N;++i){
-            int x;
-            cin>>x;
-            Arr.push_back(x);
-        }
-        Solution ob;
-        cout << ob.maximumSumSubarray(K,Arr,N) << endl;
-    }
-    return 0; 
-} 
-// } Driver Code Ends
