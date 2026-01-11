@@ -1,31 +1,38 @@
 class Solution {
 public:
+    bool palli(string &s, int i, int j){
+
+        while(i <= j){
+            if(s[i] != s[j]){
+                return false;
+            }
+            i++;
+            j--;
+        }
+
+        return true;
+    }
     int countSubstrings(string s) {
-        vector<vector<bool>> dp(s.size(), vector<bool>(s.size(), false));
-
-        int count = 0; 
-
-        for (int diff = 0; diff < s.size(); diff++) {
-            for (int i = 0, j = diff; j < s.size(); i++, j++) {
-
-                if (diff == 0)
-                    dp[i][j] = true;
-                else if (diff == 1) {
-                    if (s[i] == s[j])
-                        dp[i][j] = true;
-                    else
-                        dp[i][j] = false;
-                } else {
-                    if (s[i] == s[j]) {
-                        dp[i][j] = dp[i + 1][j - 1];
-                    } else
-                        dp[i][j] = false;
+        int n = s.length();
+        map<string,int>mpp;
+        int cnt = 0;
+        for(int i = 0 ; i < n; i++){
+            for(int j = i ; j < n; j++){
+                if(palli(s,i,j)){
+                    // if(mpp.find(s.substr(i,j-i+1)) == mpp.end()){
+                        // mpp[s.substr(i,j-i+1)] = 1;
+                        cnt++;
+                    // }
                 }
-                if (dp[i][j]) count++;
-
+                // if(palli(s,j+1,n-1)){
+                //     if(mpp.find(s.substr(j+1,n-j-1)) == mpp.end()){
+                //         mpp[s.substr(j+1,n-j-1)] = 1;
+                //         cnt++;
+                //     }
+                // }
             }
         }
 
-        return count;
+        return cnt;
     }
 };
