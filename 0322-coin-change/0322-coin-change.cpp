@@ -1,30 +1,23 @@
 class Solution {
 public:
-    int solve(vector<int>&coins, int x , vector<int>&dp){
-        if(x < 0)
-            return INT_MAX;
-        if(x == 0)
-            return 0;
-        
-        if(dp[x] != -1)
-            return dp[x];
-
-        int mini = INT_MAX;
-        for(int i = 0 ; i < coins.size(); i++){
-            int ans = solve(coins,x-coins[i],dp);
-
-            if(ans != INT_MAX)
-                mini = min(mini,1+ans);
+    int coinChange(vector<int>& coins, int amount) {
+        int n = coins.size();
+        const int INF = 1e9; 
+        vector<vector<int>> dp(n + 1, vector<int>(amount + 1, INF));
+         for (int i = 0; i <= n; ++i) {
+            dp[i][0] = 0;
+        }
+        for(int i = 1; i < n+1; i++){
+            for(int j = 1; j < amount+1; j++){
+                if(coins[i-1] <= j){
+                    dp[i][j] = min(1 + dp[i][j-coins[i-1]],dp[i-1][j]);
+                }else{
+                    dp[i][j] = dp[i-1][j];
+                }
+            }
         }
 
-        return dp[x] = mini;
-    }
-    int coinChange(vector<int>& coins, int amount) {
-        vector<int>dp(amount+1,-1);
-        int ans = solve(coins,amount,dp);
-        if(ans == INT_MAX)
-            return -1;
-        
-        return ans;
+        return dp[n][amount] == INF ? -1 : dp[n][amount];
+
     }
 };
