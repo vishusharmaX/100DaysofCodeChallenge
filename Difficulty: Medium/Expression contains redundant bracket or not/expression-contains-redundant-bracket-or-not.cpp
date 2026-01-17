@@ -1,35 +1,32 @@
 class Solution {
   public:
-    int checkRedundancy(string s) {
+    bool checkRedundancy(string &s) {
         // code here
+        
         stack<char>st;
+        
         for(int i = 0; i < s.length(); i++){
-            char ch = s[i];
-            
-            if(ch == '(' || ch == '+' || ch == '-' ||ch== '*' || ch == '/'){
-                st.push(ch);
+            if(s[i] == '(' || s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/'){
+                st.push(s[i]);
             }
-            
-            else{
-                if(ch == ')'){
-                    bool flag = true;
-                    while(st.top() != '('){
-                        char top = st.top();
-                        st.pop();
-                        if(top == '+' || top == '-' ||top== '*' || top == '/'  ){
-                            flag = false;
-                        }
+            else if(s[i] == ')'){
+                int cnt = 0;
+                while(st.top() != '('){
+                    char ch = st.top();
+                    // cout<<ch<<endl;
+                    if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
+                        cnt++;
                     }
-                        
-                    if(flag == true) return true;
                     st.pop();
                 }
+                st.pop();
                 
+                if(cnt == 0){
+                    return true;
+                }
             }
         }
         
         return false;
-        
-        
     }
 };
