@@ -1,59 +1,40 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
 
+class Solution {
+public:
 
-// } Driver Code Ends
-
-
-class Solution { 
-    using lookup_t = vector<vector<int>>;
-    using mat_t = vector<vector<char>>;
-    
-    bool dfs(
-          const mat_t& mat
-        , const string& word
-        , lookup_t& lookup
-        , int idx
-        , int x
-        , int y
-    )
-    {
+    bool solve(vector<vector<char>>& board, string word,int i , int j , int index , int m , int n){
         
-        // check if were in allowed block
-        if(idx >= word.size()) return true;
-        if(y < 0 || y >= mat.size()) return false;
-        if(x < 0 || x >= mat[y].size()) return false;
-        if(lookup[y][x] != 0) return false;
-        
-        if(word[idx] != mat[y][x]) return false;
-        
-        lookup[y][x] = 1;
-        
-        if(
-             dfs(mat, word, lookup, idx + 1, x + 1, y)
-          || dfs(mat, word, lookup, idx + 1, x - 1, y)
-          || dfs(mat, word, lookup, idx + 1, x, y + 1)
-          || dfs(mat, word, lookup, idx + 1, x, y - 1)
-        ) {
+        if(index == word.length()){
             return true;
         }
         
-        lookup[y][x] = 0;
-        return false;
-    }
-    
-  public:
-    bool isWordExist(const mat_t& mat, string& word) 
-    {
-        vector<vector<int>> lookup(mat.size(), vector<int>(mat[0].size(), 0));
+        if(i < 0 || j < 0 || i >= m || j>=n || board[i][j] == '$' || board[i][j] != word[index]){
+            return false;
+        }
         
-        for(int y{0}; y < mat.size(); y++)
-        {
-            for(int x{0}; x < mat[y].size(); x++)
-            {
-                if(dfs(mat, word, lookup, 0, x, y)) {
-                    return true;
+        char ch = board[i][j];
+       board[i][j] = '$';
+        int top = solve(board,word,i-1,j,index+1,m,n);
+        int down = solve(board,word,i+1,j,index+1,m,n);
+        int left = solve(board,word,i,j-1,index+1,m,n);
+        int right = solve(board,word,i,j+1,index+1,m,n);
+        
+        board[i][j] = ch;
+        
+        return top||down||left||right;
+        
+    }
+    bool isWordExist(vector<vector<char>>& board, string word) {
+        // Code here
+        int m = board.size();
+        int n = board[0].size();
+        
+        for(int i = 0 ;  i < m; i++){
+            for(int j = 0; j<n; j++){
+                if(board[i][j] == word[0]){
+                    if(solve(board,word,i,j,0,m,n)){
+                        return true;
+                    }
                 }
             }
         }
@@ -61,30 +42,3 @@ class Solution {
         return false;
     }
 };
-
-//{ Driver Code Starts.
-int main() {
-    int tc;
-    cin >> tc;
-    while (tc--) {
-        int n, m;
-        cin >> n >> m;
-        vector<vector<char>> mat(n, vector<char>(m, '*'));
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < m; j++)
-                cin >> mat[i][j];
-        string word;
-        cin >> word;
-        Solution obj;
-        bool ans = obj.isWordExist(mat, word);
-        if (ans)
-            cout << "true\n";
-        else
-            cout << "false\n";
-
-        cout << "~"
-             << "\n";
-    }
-    return 0;
-}
-// } Driver Code Ends
