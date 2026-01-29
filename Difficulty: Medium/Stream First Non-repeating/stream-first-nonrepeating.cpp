@@ -1,8 +1,7 @@
 class Solution {
   public:
-    string FirstNonRepeating(string &s) {
-        // Code here
-        map<char,int>mpp;
+    string firstNonRepeating(string &s) {
+         map<char,int>mpp;
         queue<int>q;
         string ans="";
         
@@ -28,7 +27,5 @@ class Solution {
         }
         
         return ans;
-        
-        
     }
 };
