@@ -1,29 +1,31 @@
 class Solution {
   public:
-    queue<int> rearrangeQueue(queue<int> q) {
-        queue<int> q1, q2;
-        int size = q.size() / 2;
-
-        for (int i = 0; i < size; i++) {
-            q1.push(q.front());
+    void rearrangeQueue(queue<int> &q) {
+        // code here
+        int n = q.size();
+        int first =  n/2;
+        vector<int>f,l;
+        
+        while(first > 0){
+            int ele = q.front();
             q.pop();
+            f.push_back(ele);
+            first--;
         }
-
-        while (!q.empty()) {
-            q2.push(q.front());
+        
+        while(!q.empty()){
+            int ele = q.front();
             q.pop();
+            l.push_back(ele);
         }
-
-
-        queue<int> nq;
-        for (int i = 0; i < size; i++) {
-            nq.push(q1.front());
-            q1.pop();
-
-            nq.push(q2.front());
-            q2.pop();
+        
+        
+        for(int i = 0; i < n/2; i++){
+            q.push(f[i]);
+            q.push(l[i]);
         }
-
-        return nq;
+        
+        
+        
     }
 };
