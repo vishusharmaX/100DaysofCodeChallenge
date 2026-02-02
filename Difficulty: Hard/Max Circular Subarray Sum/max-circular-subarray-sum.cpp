@@ -1,64 +1,27 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-
-using namespace std;
-
-
-// } Driver Code Ends
 class Solution {
   public:
-    // arr: input array
-    // Function to find maximum circular subarray sum.
-    int circularSubarraySum(vector<int> &arr) {
-
-           int n = arr.size();
-        
-        int maxKadane = INT_MIN, currentMax = 0;
-        
-        int minKadane = INT_MAX, currentMin = 0;
-        int totalSum = 0;
-        
-        for(int i=0; i<n; i++)
-        {
-            currentMax = max(arr[i], currentMax + arr[i]);
-            maxKadane = max(maxKadane, currentMax);
+    int maxCircularSum(vector<int> &arr) {
+        // code here
+        int totalsum  = 0;
+        int maxending = arr[0] , maxi = arr[0];
+        int minending = arr[0] , mini = arr[0];
+        totalsum = arr[0];
+        for(int i = 1; i < arr.size(); i++){
+            totalsum += arr[i];
             
-            currentMin = min(arr[i], currentMin + arr[i]);
-            minKadane = min(minKadane, currentMin);
+            maxending = max(arr[i] , maxending + arr[i]);
+            maxi = max(maxending,maxi);
             
-            totalSum += arr[i];
+            minending = min(arr[i] , minending + arr[i]);
+            mini = min(minending,mini);
         }
         
-        if(maxKadane < 0)
-            return maxKadane;
-            
-        return max(maxKadane, totalSum - minKadane);
+        if(maxi < 0){
+            return maxi;
+        }
+        
+       int finalans = max(maxi, totalsum - mini);
+        
+        return finalans;
     }
 };
-
-//{ Driver Code Starts.
-int main() {
-    int t;
-    cin >> t;
-    cin.ignore();
-    while (t--) {
-        vector<int> arr;
-        string input;
-
-        // Read first array
-        getline(cin, input);
-        stringstream ss(input);
-        int number;
-        while (ss >> number) {
-            arr.push_back(number);
-        }
-
-        Solution ob;
-        int res = ob.circularSubarraySum(arr);
-
-        cout << res << endl;
-    }
-    return 0;
-}
-
-// } Driver Code Ends
