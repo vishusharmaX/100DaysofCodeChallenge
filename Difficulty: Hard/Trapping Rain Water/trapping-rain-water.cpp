@@ -1,39 +1,42 @@
 class Solution {
-  public:
-    vector<int>solve(vector<int>arr,int n){
-        vector<int>ans(n,-1);
+public:
+    
+    vector<int> leftarr(vector<int>& arr){
+        int n = arr.size();
+        vector<int> ans(n);
         ans[0] = arr[0];
-        for(int i = 1; i<n; i++){
-            ans[i] = max(arr[i],ans[i-1]);
+
+        for(int i = 1; i < n; i++){
+            ans[i] = max(ans[i-1], arr[i]);
         }
-        
+
         return ans;
-        
-        
     }
-    vector<int>solve1(vector<int>arr,int n){
-        vector<int>ans(n,-1);
+    
+    vector<int> rightarr(vector<int>& arr){
+        int n = arr.size();
+        vector<int> ans(n);
         ans[n-1] = arr[n-1];
-        for(int i = n-2; i>= 0; i--){
-            ans[i] = max(arr[i],ans[i+1]);
+
+        for(int i = n-2; i >= 0; i--){
+            ans[i] = max(ans[i+1], arr[i]);
         }
+
         return ans;
-        
     }
   
     int maxWater(vector<int> &arr) {
-        // code here
         int n = arr.size();
-        vector<int>leftmax = solve(arr,n);
-        vector<int>rightmax = solve1(arr,n);
-        int total = 0;
-        for(int i =0; i < arr.size(); i++){
-            int h = min(leftmax[i],rightmax[i]);
-            int w = arr[i];
-            
-            total = total + (h-w);
+        if(n == 0) return 0;
+
+        vector<int> left = leftarr(arr);
+        vector<int> right = rightarr(arr);
+
+        int tw = 0;
+        for(int i = 0; i < n; i++){
+            tw += min(left[i], right[i]) - arr[i];
         }
-        
-        return total;
+
+        return tw;
     }
 };
