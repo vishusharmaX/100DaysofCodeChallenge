@@ -64,3 +64,15 @@ Data Structures and Algorithms are fundamental concepts in computer science and 
 ## Conclusion
 
 Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms can be a transformative journey. By committing to this challenge, you're investing in your programming skills and setting yourself up for success in coding interviews, competitive programming, and software development. Stay persistent, stay curious, and enjoy your coding journey! 🚀👨‍💻👩‍💻
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+<!---LeetCode Topics End-->
