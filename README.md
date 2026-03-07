@@ -78,17 +78,21 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0100-same-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0100-same-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0100-same-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0100-same-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 <!---LeetCode Topics End-->
