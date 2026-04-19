@@ -70,6 +70,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
@@ -124,11 +125,13 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
