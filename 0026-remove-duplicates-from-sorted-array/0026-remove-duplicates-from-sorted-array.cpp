@@ -1,16 +1,18 @@
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
-        map<int,bool>mpp;
-        vector<int>ans;
-        for(auto it : nums){
-            if(mpp.find(it) == mpp.end()){
-                mpp[it] = true;
-                ans.push_back(it);
+    int removeDuplicates(vector<int>& arr) {
+        
+        int n = arr.size();
+        int i = 0;
+        int cnt=  1;
+        for(int j = 1; j < n; j++){
+            if(arr[j] != arr[i]){
+                i++;
+                arr[i] = arr[j];
+                cnt++;
             }
         }
-        nums = ans;
-        return mpp.size();
-       
+
+        return cnt;
     }
 };
