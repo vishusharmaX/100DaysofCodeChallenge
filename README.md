@@ -142,4 +142,12 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
 <!---LeetCode Topics End-->
