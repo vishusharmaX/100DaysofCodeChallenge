@@ -1,63 +1,43 @@
 class Solution {
-  public:
-    bool solve(int node ,vector<vector<int>>&adj,vector<int>&visited, vector<int>&path){
-        path[node] = 1;
+public:
+
+    bool dfs(int node, vector<vector<int>>& adj, vector<int>& visited, vector<int>& pathVis) {
         visited[node] = 1;
-        
-        for(int i = 0; i < adj[node].size(); i++){
-            if(path[adj[node][i]]) return 1;
-            if(visited[adj[node][i]])continue;
-            
-            if(solve(adj[node][i],adj,visited, path))return 1;
-           
+        pathVis[node] = 1;
+
+        for (auto neighbor : adj[node]) {
+            if (!visited[neighbor]) {
+                if (dfs(neighbor, adj, visited, pathVis))
+                    return true;
+            }
+            else if (pathVis[neighbor]) {
+                return true;
+            }
         }
-        
-        path[node] = 0;
-        return 0;
+
+        pathVis[node] = 0;
+        return false;
     }
-  
+
     bool isCyclic(int V, vector<vector<int>> &edges) {
-        // code here
-        vector<vector<int>>adj(V);
-        for(int i = 0; i < edges.size();i++){
-            int u = edges[i][0];
-            int v = edges[i][1];
-            
-            adj[u].push_back(v);
+
+        // 🔥 Build adjacency list (DIRECTED)
+        vector<vector<int>> adj(V);
+        for (auto &e : edges) {
+            adj[e[0]].push_back(e[1]); // only one direction
         }
-        vector<int>indeg(V,0);
-        
-        for(int i = 0; i < adj.size(); i++){
-            for(int j = 0; j < adj[i].size(); j++){
-                indeg[adj[i][j]]++;
+
+        vector<int> visited(V, 0);
+        vector<int> pathVis(V, 0);
+
+        // 🔁 check all components
+        for (int i = 0; i < V; i++) {
+            if (!visited[i]) {
+                if (dfs(i, adj, visited, pathVis))
+                    return true;
             }
         }
-        
-        queue<int>q;
-        
-        for(int i = 0; i <indeg.size(); i++){
-            if(indeg[i] == 0){
-                q.push(i);
-            }
-        }
-        
-        int cnt = 0;
-        while(!q.empty()){
-            int node = q.front();
-            q.pop();
-            cnt++;
-            
-            for(int i = 0; i < adj[node].size(); i++){
-                indeg[adj[node][i]]--;
-                if(indeg[adj[node][i]] ==0){
-                    q.push(adj[node][i]);
-                }
-            }
-        }
-        
-        
-        return cnt != V;
-        
-        
+
+        return false;
     }
 };
