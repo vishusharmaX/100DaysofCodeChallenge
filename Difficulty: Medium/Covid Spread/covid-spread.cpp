@@ -1,62 +1,57 @@
-// User function Template for C++
-
 class Solution {
   public:
-    bool issafe(int x , int y , vector<vector<int>>&mat){
+    int helpaterp(vector<vector<int>> hospital) {
         
-        return (x >= 0 && x < mat.size()  && y >= 0 && y < mat[0].size() && mat[x][y] == 1);
+        int n = hospital.size();
+        int m = hospital[0].size();
         
-    }
-    
-    int helpaterp(vector<vector<int>> mat) {
-        // code here
-        int r = mat.size();
-        int c = mat[0].size();
         queue<pair<int,int>>q;
-        for(int i = 0; i < r;i++){
-            for(int j = 0; j< c; j++){
-                if(mat[i][j] == 2){
+        int cnt = 0;
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(hospital[i][j] == 2){
                     q.push({i,j});
                 }
             }
         }
         
-        if(q.size() == 0)return 0;
-        
-        
-        int times = 0;
         while(!q.empty()){
-            times++;
             int size = q.size();
+            bool spread = false;
+
             while(size--){
-                int row = q.front().first;
-                int col = q.front().second;
+                auto p = q.front();
+                int x = p.first;
+                int y = p.second;
                 q.pop();
-                int dirx[] = {-1, 1, 0, 0};
-                int diry[] = {0, 0, -1, 1};
-    
+
+                int dirx[4] = {0,0,-1,1};
+                int diry[4] = {-1,1,0,0};
                 
-                for(int i = 0; i < 4; i++){
-                    int newx = dirx[i]+row;
-                    int newy = diry[i] +col;
-                    if(issafe(newx,newy,mat)){
+                for(int k = 0; k < 4; k++){
+                    int newx = x + dirx[k];
+                    int newy = y + diry[k];
+
+                    if(newx>=0 && newx<n && newy>=0 && newy<m && hospital[newx][newy]==1){
+                        hospital[newx][newy] = 2;
                         q.push({newx,newy});
-                        mat[newx][newy] = 2;
+                        spread = true;
                     }
                 }
-                
-            
             }
+
+            if(spread) cnt++;
         }
-       for(int i = 0; i < r;i++){
-            for(int j = 0; j< c; j++){
-                if(mat[i][j] == 1){
+        
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(hospital[i][j] == 1){
                     return -1;
                 }
             }
         }
-        
-        return times-1;
-        
+
+        return cnt;
     }
 };
