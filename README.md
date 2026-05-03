@@ -74,11 +74,13 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0016-3sum-closest](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0016-3sum-closest/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
+| [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
@@ -96,6 +98,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0100-same-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0100-same-tree/) | Easy |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0199-binary-tree-right-side-view/) | Medium |
+| [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
@@ -107,6 +110,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0104-maximum-depth-of-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0199-binary-tree-right-side-view/) | Medium |
+| [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
@@ -155,6 +159,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
