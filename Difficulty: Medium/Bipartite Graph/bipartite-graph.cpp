@@ -1,10 +1,11 @@
 class Solution {
   public:
     bool isBipartite(int V, vector<vector<int>> &edges) {
-        // Code here
+        
+        
         vector<vector<int>>adj(V);
         
-        for(int i= 0; i < edges.size(); i++){
+        for(int i = 0; i < edges.size(); i++){
             int u = edges[i][0];
             int v = edges[i][1];
             
@@ -12,38 +13,35 @@ class Solution {
             adj[v].push_back(u);
         }
         
-        vector<int>color(V,-1);
-        queue<int>q;
         
-        for(int i = 0; i < V; i++){
-            if(color[i] == -1){
-                 q.push(0);
-        color[0] = 0;
+        vector<int> color(V, -1);
         
-        
-        while(!q.empty()){
-            int node = q.front();
-            q.pop();
-            
-            for(int i = 0; i < adj[node].size(); i++){
-                //if color is not assign
-                if(color[adj[node][i]] == -1){
-                    color[adj[node][i]] = (color[node] + 1)%2;
-                    q.push(adj[node][i]);
-                }
+        for(int j = 0; j < V; j++){
+            if(color[j] == -1){
                 
-                else{
-                    if(color[node] == color[adj[node][i]])return 0;
+                queue<int> q;
+                q.push(j);
+                color[j] = 0;
+                
+                while(!q.empty()){
+                    int node = q.front();
+                    q.pop();
+                    
+                    for(int k = 0; k < adj[node].size(); k++){
+                        int neigh = adj[node][k];
+                        
+                        if(color[neigh] == -1){
+                            color[neigh] = (color[node] + 1) % 2;
+                            q.push(neigh);
+                        }
+                        else if(color[node] == color[neigh]){
+                            return false;
+                        }
+                    }
                 }
             }
         }
         
-        
-        
-                
-            }
-        }
-        return 1;
-        
+        return true;
     }
 };
