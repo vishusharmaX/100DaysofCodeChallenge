@@ -75,6 +75,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
+| [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
@@ -131,6 +132,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
+| [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Sorting
@@ -198,4 +200,8 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
+## Prefix Sum
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 <!---LeetCode Topics End-->
