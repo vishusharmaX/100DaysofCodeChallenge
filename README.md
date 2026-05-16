@@ -130,6 +130,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Sorting
@@ -168,4 +169,16 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
+## Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
+## Design
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
+## Doubly-Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
 <!---LeetCode Topics End-->
