@@ -108,6 +108,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
+| [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -138,6 +139,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
+| [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
@@ -180,10 +182,12 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
+| [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
+| [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
