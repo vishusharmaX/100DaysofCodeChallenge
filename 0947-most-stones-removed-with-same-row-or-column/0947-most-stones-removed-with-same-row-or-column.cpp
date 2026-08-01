@@ -1,25 +1,31 @@
 class Solution {
 public:
-    int removeStones(vector<vector<int>>& stones) {
-        
-        map<int,int>mpp;
-        mpp[stones[0][0]] = stones[0][1];
-        mpp[stones[0][1]] = stones[0][0];
-        int cnt = 0;
-        for(int i = 1; i < stones.size(); i++){
-            
-            int first = stones[i][0];
-            int second = stones[i][1];
+    void solve(vector<vector<int>>& stones, int indx , vector<int>&visited ){
+        visited[indx] = true;
 
-            if(mpp.find(first) != mpp.end() ||  mpp.find(second) != mpp.end()){
-                cnt++;
+        for(int i = 0; i < stones.size(); i++){
+            int r = stones[indx][0];
+            int c = stones[indx][1];
+            if(  visited[i] == 0  &&  (stones[i][0] == r || stones[i][1] == c ) ){
+                solve(stones,i,visited);
+            }
+        }
+    }
+    int removeStones(vector<vector<int>>& stones) {
+        int n = stones.size();
+
+        vector<int>visited(n,0);
+
+        int cnt = 0;
+        for(int i  = 0; i < n; i++){
+            if(visited[i] == true){
+                continue;
             }
 
-            mpp[first]=second;
-            mpp[second]=first;
+            solve(stones,i,visited);
+            cnt++;
+        }   
 
-        }
-
-        return cnt;
+        return n-cnt;
     }
 };
