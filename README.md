@@ -78,6 +78,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0315-count-of-smaller-numbers-after-self](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
+| [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
@@ -176,6 +177,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
+| [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
@@ -209,6 +211,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
+| [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -264,4 +267,5 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
+| [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 <!---LeetCode Topics End-->
