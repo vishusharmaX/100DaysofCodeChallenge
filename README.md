@@ -83,6 +83,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+| [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -142,6 +143,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+| [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -149,6 +151,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0016-3sum-closest](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0016-3sum-closest/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+| [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
