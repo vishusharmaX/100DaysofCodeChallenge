@@ -1,66 +1,31 @@
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
-        vector<int>a;
-        vector<int>b;
+        
+        vector<int>ans(nums.size(),0);
+        int k = nums.size()-1;
 
-        for(int i = 0; i < nums.size(); i++){
-            if(nums[i] > 0){
-                a.push_back(nums[i]);
-            }else{
-                b.push_back(nums[i]);
+        int i = 0 , j = nums.size()-1;
+
+        while(i <= j){
+            int lsq = pow(nums[i],2);
+            int rsq = pow(nums[j],2);
+
+            if(rsq  >= lsq){
+                j--;
+                ans[k]=rsq;
+                k--;
             }
-        }
-
-        if(b.size() == 0){
-            for(int i = 0; i < a.size(); i++){
-                a[i] = a[i] * a[i];
-            }
-
-            return a;
-        }
-
-        if(a.size() == 0){
-            for(int i = 0; i < b.size(); i++){
-                b[i] = b[i] * b[i];
-            }
-            reverse(b.begin(),b.end());
-            return b;
-        }
-
-        vector<int>ans;
-
-        for(int i = 0; i < a.size(); i++){
-                a[i] = a[i] * a[i];
-        }
-        for(int i = 0; i < b.size(); i++){
-                b[i] = b[i] * b[i];
-        }
-        reverse(b.begin(), b.end());
-        int i = 0 , j = 0;
-
-        while(i < a.size()  && j < b.size()){
-            if(a[i] <= b[j]){
-                ans.push_back(a[i]);
+            else if(lsq > rsq){
                 i++;
+                ans[k] = lsq;
+                k--;
             }
             else{
-                ans.push_back(b[j]);
-                j++;
+                i++;
+                j--;
             }
         }
-
-        while(i < a.size()  ){
-          
-                ans.push_back(a[i]);
-                i++;
-        }
-         while(j < b.size()  ){
-          
-                ans.push_back(b[j]);
-                j++;
-        }
-
 
         return ans;
     }
