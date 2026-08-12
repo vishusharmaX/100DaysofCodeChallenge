@@ -83,6 +83,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+| [1718-construct-the-lexicographically-largest-valid-sequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1718-construct-the-lexicographically-largest-valid-sequence/) | Medium |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
 ## Matrix
@@ -211,6 +212,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0022-generate-parentheses/) | Medium |
+| [1718-construct-the-lexicographically-largest-valid-sequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1718-construct-the-lexicographically-largest-valid-sequence/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
