@@ -1,39 +1,58 @@
 class Solution {
 public:
-    bool goBack = false;
-    
-    void func(int i, vector<int>&ans, vector<bool>&isUsed, int n){
-        if( i == (n*2)-1){
-            goBack = true;
-            return;
-        }
-        if(ans[i] != 0){
-            func(i+1, ans, isUsed, n);
-            return;
-        }
-        for(int num = n; num >= 1; num--){
-            if(isUsed[num]) continue;
-            if( (num != 1) and (i+num ) > ((n*2)-2)) continue;
-            if( (num != 1) and ans[i+num] != 0) continue;
-            
-            ans[i] = num;
-            if(num != 1) ans[i+num] = num; 
-            isUsed[num] = true;
-             func(i+1, ans, isUsed, n);
-             if(goBack) return;
-            ans[i] = 0;
-            if(num != 1) ans[i+num] = 0;
-            isUsed[num] = false; 
-        }
-        return;
-    }
+    bool solve(int i , int n , vector<int>&result , vector<bool>&used){
 
+        if(i >= result.size()){
+            return true;
+        }
+
+        if(result[i] != -1){
+            return solve(i+1, n , result , used);
+        }
+
+        for(int num = n; num >= 1 ; num--){
+            
+            if(used[num] == true){
+                continue;
+            }
+
+            used[num] = true;
+            result[i] = num;
+
+            if(num == 1){
+                if(solve(i + 1, n, result, used)){
+                    return true;
+                }
+            }
+
+            else{
+                int j = num + i;
+
+                if(j < result.size() && result[j] == -1){
+                    result[j] = num;
+                    if(solve(i+1,n, result, used)== true){
+                        return true;
+                    }
+                    result[j] = -1;
+                }
+            }
+
+            used[num]=false;
+            result[i] = -1;
+
+        }
+
+
+        return false;
+
+    }
     vector<int> constructDistancedSequence(int n) {
-        int size = (n*2) - 1;
-        vector<int>ans(size,0);
-        vector<bool>isUsed(n+1,false);
-        func(0, ans, isUsed, n);
-        goBack = false; 
-        return ans;
+        
+        vector<int>result(2*n-1,-1);
+        vector<bool>used(n+1,false);
+
+        solve(0, n , result, used);
+
+        return result;
     }
 };
