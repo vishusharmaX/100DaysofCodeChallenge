@@ -70,6 +70,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0001-two-sum/) | Easy |
 | [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0016-3sum-closest/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
@@ -139,6 +140,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0001-two-sum/) | Easy |
 | [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
