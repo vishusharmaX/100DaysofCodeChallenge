@@ -82,6 +82,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
+| [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
@@ -149,6 +150,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
+| [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
@@ -182,6 +184,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
 | [0316-remove-duplicate-letters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0316-remove-duplicate-letters/) | Medium |
+| [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
 ## Dynamic Programming
