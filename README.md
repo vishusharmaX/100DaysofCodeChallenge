@@ -142,6 +142,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0001-two-sum/) | Easy |
+| [0013-roman-to-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0013-roman-to-integer/) | Easy |
 | [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
@@ -176,6 +177,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0013-roman-to-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0013-roman-to-integer/) | Easy |
 | [0022-generate-parentheses](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0022-generate-parentheses/) | Medium |
 | [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
@@ -222,6 +224,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0013-roman-to-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0013-roman-to-integer/) | Easy |
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
