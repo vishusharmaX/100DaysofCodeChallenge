@@ -74,6 +74,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0016-3sum-closest/) | Medium |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
+| [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
@@ -141,6 +142,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0001-two-sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0001-two-sum/) | Easy |
+| [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0146-lru-cache](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0146-lru-cache/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
@@ -154,6 +156,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0015-3sum](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0016-3sum-closest/) | Medium |
+| [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
@@ -174,6 +177,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0022-generate-parentheses/) | Medium |
+| [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
 | [0316-remove-duplicate-letters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
