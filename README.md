@@ -85,6 +85,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0994-rotting-oranges/) | Medium |
+| [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1718-construct-the-lexicographically-largest-valid-sequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1718-construct-the-lexicographically-largest-valid-sequence/) | Medium |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
@@ -196,6 +197,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
+| [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -231,6 +233,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
+| [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -288,4 +291,5 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
+| [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 <!---LeetCode Topics End-->
