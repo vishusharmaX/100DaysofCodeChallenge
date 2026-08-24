@@ -88,6 +88,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1718-construct-the-lexicographically-largest-valid-sequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1718-construct-the-lexicographically-largest-valid-sequence/) | Medium |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3471-find-the-largest-almost-missing-integer/) | Easy |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
@@ -201,6 +202,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -237,6 +239,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 | [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
@@ -246,6 +249,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -297,5 +301,14 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 | [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
+## Minimax
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
+## Zero-Sum Game
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 <!---LeetCode Topics End-->
