@@ -190,6 +190,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
+| [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -236,6 +237,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
+| [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -279,6 +281,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0316-remove-duplicate-letters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
+| [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -294,4 +297,5 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
+| [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
 <!---LeetCode Topics End-->
