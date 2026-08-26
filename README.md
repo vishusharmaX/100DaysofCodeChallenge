@@ -194,6 +194,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
 | [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
+| [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2904-shortest-and-lexicographically-smallest-beautiful-string/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -276,6 +277,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0904-fruit-into-baskets](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0904-fruit-into-baskets/) | Medium |
+| [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2904-shortest-and-lexicographically-smallest-beautiful-string/) | Medium |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
