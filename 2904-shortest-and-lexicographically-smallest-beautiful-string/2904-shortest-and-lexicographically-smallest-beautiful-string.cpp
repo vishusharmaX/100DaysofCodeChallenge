@@ -1,16 +1,15 @@
 class Solution {
 public:
     string shortestBeautifulSubstring(string s, int k) {
-        int n = s.length();
+        
         string result = "";
-        for(int len = k ; len <= n ; len++){
-            for(int start = 0; start <= n - len ; start++){
-
+        int n = s.length();
+        for(int len = k; len <= n; len++){
+            for(int start = 0; start <= n-k ; start++){
                 string temp = s.substr(start,len);
-
                 int onecnt = 0;
                 for(char ch : temp){
-                    onecnt += ch == '1' ? 1: 0;
+                    onecnt += ch =='1'? 1 : 0;
                 }
 
                 if(onecnt == k){
@@ -18,15 +17,12 @@ public:
                         result = temp;
                     }
                 }
-
             }
 
             if(!result.empty()){
                 return result;
             }
         }
-
-
 
         return "";
     }
