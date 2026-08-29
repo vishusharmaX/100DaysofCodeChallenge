@@ -89,6 +89,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [1582-special-positions-in-a-binary-matrix](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1718-construct-the-lexicographically-largest-valid-sequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1718-construct-the-lexicographically-largest-valid-sequence/) | Medium |
 | [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3471-find-the-largest-almost-missing-integer/) | Easy |
 | [3718-smallest-missing-multiple-of-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
@@ -169,6 +170,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0987-vertical-order-traversal-of-a-binary-tree/) | Hard |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -216,6 +218,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0200-number-of-islands](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0200-number-of-islands/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
