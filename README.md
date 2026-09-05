@@ -94,6 +94,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [3471-find-the-largest-almost-missing-integer](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3471-find-the-largest-almost-missing-integer/) | Easy |
 | [3718-smallest-missing-multiple-of-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
 | [3731-find-missing-elements](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3731-find-missing-elements/) | Easy |
+| [3904-smallest-stable-index-ii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3904-smallest-stable-index-ii/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -260,6 +261,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | ------- | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
+| [3904-smallest-stable-index-ii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3904-smallest-stable-index-ii/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
