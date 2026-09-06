@@ -194,6 +194,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0022-generate-parentheses](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0022-generate-parentheses/) | Medium |
 | [0049-group-anagrams](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0049-group-anagrams/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
+| [0115-distinct-subsequences](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0115-distinct-subsequences/) | Hard |
 | [0316-remove-duplicate-letters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0316-remove-duplicate-letters/) | Medium |
 | [0953-verifying-an-alien-dictionary](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
@@ -208,6 +209,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [0022-generate-parentheses](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0022-generate-parentheses/) | Medium |
 | [0062-unique-paths](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0062-unique-paths/) | Medium |
 | [0072-edit-distance](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0072-edit-distance/) | Medium |
+| [0115-distinct-subsequences](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0115-distinct-subsequences/) | Hard |
 | [0486-predict-the-winner](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/0877-stone-game/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1143-longest-common-subsequence/) | Medium |
