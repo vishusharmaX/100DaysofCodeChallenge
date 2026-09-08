@@ -254,6 +254,7 @@ Embarking on the 100 Days of Code Challenge for Data Structures and Algorithms c
 | [1563-stone-game-v](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1563-stone-game-v/) | Hard |
 | [1872-stone-game-viii](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1872-stone-game-viii/) | Hard |
 | [1927-sum-game](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/1927-sum-game/) | Medium |
+| [3870-count-commas-in-range](https://github.com/vishusharmaX/100DaysofCodeChallenge/tree/main/3870-count-commas-in-range/) | Easy |
 ## Combinatorics
 | Problem Name | Difficulty |
 | ------- | ------- |
